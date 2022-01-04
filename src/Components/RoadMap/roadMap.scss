@@ -1,0 +1,130 @@
+@import "../../fonts.scss";
+
+.roadmap {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin-top: 200px;
+    // background-color: chocolate;
+
+    & .container {
+        position: relative;
+        max-width: 1300px;
+
+        // background-color: rgba(224, 255, 255, 0.192);
+    }
+
+    &__track {
+        position: relative;
+        height: 250px;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        overflow-x: auto;
+        user-select: none;
+
+        &::-webkit-scrollbar:horizontal {
+            height: 6px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-track:horizontal {
+            height: 6px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar {
+            position: relative;
+            width: 3px !important;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-track {
+            width: 3px !important;
+            background-color: transparent;
+        }
+
+        // background-color: rgba(128, 255, 0, 0.158);
+
+        & .roadmap-block {
+            position: relative;
+            min-width: 380px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 30px;
+            padding: 40px 0 33px 0;
+
+            // background-color: cadetblue;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: -24px;
+                bottom: 63px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+            }
+
+            & h2 {
+                position: relative;
+                color: #fff;
+                letter-spacing: 2px;
+                @include bebas-reg;
+            }
+
+            & h4 {
+                position: relative;
+                color: #fff;
+                letter-spacing: 1.5px;
+                @include faible;
+            }
+
+            & .roadmap__line {
+                position: absolute;
+                bottom: 70px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 50px;
+            }
+
+            & span {
+                color: rgb(197, 197, 197);
+                @include bebas-reg;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+}
+
+.roadmap-block:nth-child(1) {
+    & h4 {
+        top: 50px;
+    }
+}
+
+.roadmap-block:nth-child(4) .roadmap__line::after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url("../../assets/arrow-right.png");
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0;
+    transition: 250ms ease;
+}
+
+.roadmap-block:nth-child(4) .roadmap__line.active::after {
+    opacity: 1;
+}

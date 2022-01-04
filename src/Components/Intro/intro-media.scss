@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+
+    .intro__inner .intro__title {
+        width: 100%;
+
+        & h1 {
+            text-align: center;
+            width: 100%;
+            padding: 0 20px;
+
+            & div span {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .intro__inner .right-anim {
+        display: none;
+    }
+}

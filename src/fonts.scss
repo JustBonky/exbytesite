@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Bebas Neue Regular";
+  src: url("./fonts/BebasNeueRegular.eot");
+  src: url("./fonts/BebasNeueRegular.eot?#iefix") format("embedded-opentype");
+  src: url("./fonts/BebasNeueRegular.woff") format("woff");
+  src: url("./fonts/BebasNeueRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin bebas-reg {
+  font-family: "Bebas Neue Regular";
+}
+
+@font-face {
+  font-family: "Sulphur Point";
+  src: url("./fonts/SulphurPoint-Light.woff") format("woff");
+  src: url("./fonts/SulphurPoint-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin sulphur {
+  font-family: "Sulphur Point";
+}
+@font-face {
+  font-family: "Faible";
+  src: url("./fonts/Faible-Medium.woff2") format("woff2");
+  src: url("./fonts/Faible-Medium.woff") format("woff");
+  src: url("./fonts/Faible-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@mixin faible {
+  font-family: "Faible";
+}
+@font-face {
+  font-family: "Sequel";
+  src: url("./fonts/Sequel_Demo.ttf") format("truetype");
+}
+@mixin sequel {
+  font-family: "Sequel";
+}
+
+@font-face {
+  font-family: "Fira Sans Extra Condensed Regular";
+  src: url("./fonts/FiraSansExtraCondensed-Regular.eot");
+  src: url("./fonts/FiraSansExtraCondensed-Regular.woff") format("woff");
+  src: url("./fonts/FiraSansExtraCondensed-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin fira {
+  font-family: "Fira Sans Extra Condensed Regular";  
+}

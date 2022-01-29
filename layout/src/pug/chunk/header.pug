@@ -1,4 +1,5 @@
 header.site-header#site-header
+    .header-bg
     .container.site-header-container
         .header__logo
             img(src="img/logo.png", alt="Exbyte Studios Logo")
@@ -9,14 +10,4 @@ header.site-header#site-header
                         a(href = '/' + val.toLowerCase())= val
         .header__info
             a(href="/contact")
-                svg(xmlns="http://www.w3.org/2000/svg")
-                    rect(
-                        x="0"
-                        y="0"
-                        rx="7"
-                        ry="7"
-                        stroke='#fff'
-                        stroke-width='2'
-                        fill='none'
-                    )
                 span Contact us 

@@ -8,14 +8,24 @@ body
     background: #000
     font-family: 'Nunito Light', sans-serif
     height: 100vh
+    min-height: 100vh
     min-width: 320px
     font-size: 18px
     line-height: 1.5
     letter-spacing: 0.05rem
     color: #fff
+    overflow: hidden
 
-    // & .scroll-content
-    //     height: 100%
+    & .scroll-wrapper
+        height: 100vh
+
+    & .scrollbar-track-y
+        background: rgba(0,0,0,0)
+        width: 10px
+        & .scrollbar-thumb
+            width: 100%
+            border: 3px double #ccc
+            background: #000
 
     @media (max-width: 700px)
         background: red

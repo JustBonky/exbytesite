@@ -1,0 +1,9 @@
+@mixin add-font ($name, $path, $weight: '400', $style: 'normal') {
+    @font-face {
+        font-family: $name;
+        src: url('../fonts' + $path);
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}

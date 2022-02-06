@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel src/*.html -p 5000"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.1",
+    "parcel": "^2.2.1"
+  }
+}

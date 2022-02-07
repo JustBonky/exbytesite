@@ -1,4 +1,4 @@
-12630
+12631
 113C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@parcel\optimizer-htmlnano\src\svgMappings.js132886446951905527 0
 91C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@types\node\domain.d.ts132886446949995556 0
 98C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\type-fest\source\value-of.d.ts132886446964335506 0
@@ -12,7 +12,7 @@
 77C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\lru-cache132886446899365512 1
 91C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@babel\traverse\scripts132886446962985524 1
 83C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\is-glob\LICENSE132886446887995530 0
-67C:\Users\dmitriy\Documents\localhost\exbytesite\layout\package.json132886448926926157 0
+67C:\Users\dmitriy\Documents\localhost\exbytesite\layout\package.json132887414263989944 0
 96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\nth-check\lib\parse.d.ts.map132886446919075544 0
 98C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\lmdb\dependencies\lmdb-data-v1132886446911765559 1
 89C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\object-is\polyfill.js132886446925985476 0
@@ -41,7 +41,7 @@
 109C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\features\eventsource.js132886447022765526 0
 98C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\es\number\parse-int.js132886447153065570 0
 90C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\fast-glob\out\index.js132886446935095529 0
-65C:\Users\dmitriy\Documents\localhost\exbytesite\layout\.gitignore132886447483299799 0
+65C:\Users\dmitriy\Documents\localhost\exbytesite\layout\.gitignore132886556491449300 0
 92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@babel\traverse\lib\path132886446954185551 1
 103C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\type-fest\source\readonly-deep.d.ts132886446957965548 0
 96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@parcel\watcher\src\watchman132886446961485511 1
@@ -62,7 +62,7 @@
 101C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\icss-utils\src\createICSSRules.js132886446888725511 0
 82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\.bin\json5.ps1132886447178115520 0
 97C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\css-select\lib\index.d.ts.map132886446943755504 0
-59C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist132886555632255109 1
+59C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist132887413405190244 1
 102C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\modules\esnext.set.some.js132886447059225577 0
 76C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\svgo\lib132886446984735597 1
 107C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\features\autofocus.js132886446965745543 0
@@ -138,7 +138,7 @@
 114C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-merge-longhand\dist\lib\hasAllProps.js132886446932815482 0
 91C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\unbox-primitive\LICENSE132886446905255510 0
 89C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\yaml\browser\types.js132886446966085533 0
-69C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\index.html132886539224130588 0
+69C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\index.html132887412507397133 0
 115C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-merge-longhand\dist\lib\decl\borders.js132886446895685517 0
 105C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\features\instance\for-each.js132886447095125542 0
 82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\public-encrypt132886446931695523 1
@@ -153,7 +153,7 @@
 76C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\minimist132886446943815516 1
 91C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\function-bind\.eslintrc132886446918375512 0
 88C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\json5\lib\require.js132886446923105512 0
-70C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\blocks132886523712358740 1
+70C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\blocks132887259079621236 1
 96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@parcel\workers\src\Trace.js132886446966665539 0
 105C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@swc\helpers\src\_class_call_check.js132886446980575533 0
 109C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\internals\engine-is-ie-or-edge.js132886447028905603 0
@@ -163,7 +163,7 @@
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\source-map-support\package.json132886446910365575 0
 85C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\is-docker\license132886446887745521 0
 85C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\fast-glob\LICENSE132886446896755509 0
-74C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\index.scss132886523789245232 0
+74C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\index.scss132887259169711655 0
 113C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\stable\array\virtual\last-index-of.js132886447139555543 0
 96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\svgo\plugins\minifyStyles.js132886446960015549 0
 85C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\yaml\parse-cst.js132886446952225495 0
@@ -183,7 +183,7 @@
 75C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\_fonts.scss132886526766467500 0
 102C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\features\iterator\index.js132886447125705582 0
 92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\css-select\lib\sort.d.ts132886446961315529 0
-76C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\_global.scss132886543365226209 0
+76C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\_global.scss132887279370098553 0
 106C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\terser\node_modules\source-map\LICENSE132886446896325541 0
 88C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\strip-ansi\readme.md132886446900755525 0
 76C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\_mixins.scss132886503068300744 0
@@ -201,7 +201,7 @@
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\ST.js132886447055295546 0
 74C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\dotenv132886446927815525 1
 88C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\type-fest\index.d.ts132886446939345522 0
-83C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\blocks\_header.scss132886543680721848 0
+83C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\blocks\_header.scss132887375752161262 0
 78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\concat-map132886446913595522 1
 102C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\internals\try-to-string.js132886447171925580 0
 119C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_load.1132886446959585535 0
@@ -212,7 +212,21 @@
 115C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@swc\helpers\lib\_initializer_warning_helper.js132886446962315550 0
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\NZ.js132886447047535533 0
 94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\connect\node_modules\debug132886446930595514 1
-82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\blocks\_intro.scss132886555628268615 0
+82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\blocks\_intro.scss132887378571066746 0
+99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\IE.js132886447032405587 0
+123C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\midl.h132886446993905568 0
+78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\ansi-regex132886446903785513 1
+96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-selector-parser\dist132886446957015577 1
+94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-discard-overridden132886446900495543 1
+108C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@parcel\utils\lib\dependency-location.js132886446965985518 0
+74C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\pbkdf2132886446930235520 1
+92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\shebang-command\index.js132886446892195512 0
+80C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\highlight.js132886447033725539 1
+71C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\fonts\Nunito132886453217324559 1
+87C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\htmlparser2\LICENSE132886446888975541 0
+86C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\scss\blocks\_our-games.scss132887413401363778 0
+79C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\web132886447175505563 1
+89C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\pako\dist\pako.min.js132886446960385559 0
 126C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@parcel\core\test\fixtures\library-scopehoist\package.json132886447012395607 0
 87C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\hash.js\lib\hash.js132886446916355524 0
 94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-normalize-url\dist132886446892165502 1
@@ -276,16 +290,6 @@
 91C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\public-encrypt\index.js132886446910415536 0
 96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\es-abstract\2015\MakeDate.js132886447047215569 0
 78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\img\icons\xmark.svg132886540553686454 0
-99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\IE.js132886447032405587 0
-123C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\midl.h132886446993905568 0
-78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\ansi-regex132886446903785513 1
-96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-selector-parser\dist132886446957015577 1
-94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-discard-overridden132886446900495543 1
-108C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@parcel\utils\lib\dependency-location.js132886446965985518 0
-74C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\pbkdf2132886446930235520 1
-92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\shebang-command\index.js132886446892195512 0
-80C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\highlight.js132886447033725539 1
-71C:\Users\dmitriy\Documents\localhost\exbytesite\layout\src\fonts\Nunito132886453217324559 1
 82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\svgo\README.md132886446983435594 0
 106C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\jake\node_modules\ansi-styles\index.js132886446892395545 0
 92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\abortcontroller-polyfill132886446943605545 1
@@ -448,12 +452,6 @@
 113C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\css-select\lib\pseudo-selectors\subselects.js132886446931655542 0
 108C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\stable\instance\code-point-at.js132886447008545526 0
 74C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\base-x132886446923775564 1
-93C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\internals\task.js132886447166395534 0
-86C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\picomatch\index.js132886446896705516 0
-97C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\ncp\test\modified-files\src\a132886446938515546 0
-109C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@nodelib\fs.stat\out\providers\async.d.ts132886446929415546 0
-106C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\features\template.js132886447056885576 0
-92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\stream-http\node_modules132886446856804120 1
 81C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\cssnano-utils132886446918785513 1
 109C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\features\function\has-instance.js132886447110195540 0
 84C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\split2\README.md132886446926705503 0
@@ -3065,6 +3063,12 @@
 94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\css-tree\lib\syntax\config132886446996865618 1
 87C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\side-channel\.nycrc132886446895085525 0
 87C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\stream-http\LICENSE132886446901225523 0
+93C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\internals\task.js132886447166395534 0
+86C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\picomatch\index.js132886446896705516 0
+97C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\ncp\test\modified-files\src\a132886446938515546 0
+109C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@nodelib\fs.stat\out\providers\async.d.ts132886446929415546 0
+106C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\features\template.js132886447056885576 0
+92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\stream-http\node_modules132886446856804120 1
 128C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\hash-base\node_modules\readable-stream\lib\_stream_duplex.js132886446892975495 0
 92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\stream-http\package.json132886446924215500 0
 113C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\modules\esnext.async-iterator.from.js132886447053345529 0
@@ -4364,9 +4368,9 @@
 103C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-minify-params\dist\index.js132886446892815574 0
 113C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\highlight.js\styles\atelier-savanna-light.css132886446952535576 0
 104C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-minify-gradients\LICENSE-MIT132886446887895521 0
+94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\get-intrinsic\CHANGELOG.md132886446920445514 0
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@jridgewell\resolve-uri\LICENSE132886446888015540 0
 102C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-minify-gradients\README.md132886446907305516 0
-94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\get-intrinsic\CHANGELOG.md132886446920445514 0
 100C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\highlight.js\scss\purebasic.scss132886447031315558 0
 85C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\jsesc\man\jsesc.1132886446915185534 0
 106C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\postcss-minify-gradients\dist\index.js132886446892805558 0
@@ -4641,9 +4645,6 @@
 114C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@babel\highlight\node_modules\has-flag\license132886446896125531 0
 93C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\pako\lib\utils\strings.js132886446961065540 0
 91C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\node-forge\package.json132886446977855544 0
-87C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\htmlparser2\LICENSE132886446888975541 0
-79C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\web132886447175505563 1
-89C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\pako\dist\pako.min.js132886446960385559 0
 97C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\pako\dist\pako_deflate.min.js132886446952045564 0
 93C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\pako\dist\pako_inflate.js132886446954585532 0
 139C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\hash-base\node_modules\readable-stream\lib\internal\streams\pipeline.js132886446940075546 0
@@ -7817,7 +7818,7 @@
 100C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\stable\array\index-of.js132886447116885524 0
 116C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\css-select\lib\pseudo-selectors\filters.d.ts.map132886446941525556 0
 95C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\crypto-browserify\.zuul.yml132886446913925533 0
-87C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\Nunito-Regular.d80fa773.ttf132886541645880634 0
+87C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\Nunito-Regular.d80fa773.ttf132887409126145603 0
 95C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\browserify-aes\package.json132886446893905516 0
 106C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\es-abstract\2018\ArraySpeciesCreate.js132886446977425635 0
 92C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\es-abstract\2018\Call.js132886446990385570 0
@@ -9045,7 +9046,7 @@
 117C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\modules\esnext.async-iterator.for-each.js132886447053285564 0
 108C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\es\string\virtual\starts-with.js132886447164185576 0
 109C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\stable\number\virtual\to-fixed.js132886447167105608 0
-94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\game_controller_black.311c99e5.svg132886550655071994 0
+94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\game_controller_black.311c99e5.svg132887409126145603 0
 101C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\@parcel\reporter-cli\src\utils.js132886446961155527 0
 96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\stable\math\clz32.js132886447006895549 0
 96C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\core-js\stable\math\hypot.js132886447113455529 0
@@ -10731,7 +10732,7 @@
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\TN.js132886447058155526 0
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\TO.js132886447058205516 0
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\TT.js132886447058665522 0
-80C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\electro.71dcb734.svg132886544913162534 0
+80C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\electro.71dcb734.svg132887409126699674 0
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\TV.js132886447058795531 0
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\UA.js132886447059035537 0
 99C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\caniuse-lite\data\regions\UY.js132886447059745518 0
@@ -12621,11 +12622,11 @@
 83C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\.bin\terser.cmd132886447178135540 0
 78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\.bin\which132886447178155532 0
 82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\node_modules\.bin\which.cmd132886447178145537 0
-94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\game_controller_white.06f20485.svg132886550654991973 0
-78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\index.da533f7e.css132886555632052594 0
-82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\index.da533f7e.css.map132886555632255109 0
-70C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\index.html132886541645830530 0
+94C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\game_controller_white.06f20485.svg132887409126705199 0
+78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\index.da533f7e.css132887413405089399 0
+82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\index.da533f7e.css.map132887413405190244 0
+70C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\index.html132887412511395652 0
 82C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\layout.59712999.js.map132886541645729906 0
-77C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\logo.726d37a8.png132886541645981370 0
-88C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\NunitoSans-Bold.bbdc1ddb.ttf132886541645583498 0
-78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\xmark.1cb672d3.svg132886541646183352 0
+77C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\logo.726d37a8.png132887409126145603 0
+88C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\NunitoSans-Bold.bbdc1ddb.ttf132887409126145603 0
+78C:\Users\dmitriy\Documents\localhost\exbytesite\layout\dist\xmark.1cb672d3.svg132887409126145603 0

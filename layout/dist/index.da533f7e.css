@@ -54,9 +54,14 @@ body {
   line-height: 1.5;
 }
 
+main {
+  margin-top: 100px !important;
+  z-index: 0;
+}
+
 .container {
   display: block;
-  max-width: 1330px;
+  max-width: 1230px;
   margin: 0 auto;
   height: inherit;
   padding: 0 15px;
@@ -70,11 +75,20 @@ body {
 }
 
 .body-header {
+  width: 100%;
   height: 100px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #19191b;
 }
 
-.body-header::after {
+.body-header.scrolled {
+  overflow: hidden;
+}
+
+.body-header.scrolled::after {
   content: "";
   position: absolute;
   width: 200%;
@@ -82,7 +96,12 @@ body {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  box-shadow: 0 4px 30px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 -4px 30px 0 rgba(255, 255, 255, 0), inset 0 0 30px 0 rgba(255, 255, 255, 0.05);
+}
+
+.body-header.scrolled .body-header-container::before {
+  transform: rotate(90deg);
+  top: 25px;
 }
 
 .body-header-container {
@@ -90,17 +109,25 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  z-index: 5;
+}
+
+.body-header-container.init-header::before {
+  top: 20px;
+  transform: rotate(0deg);
 }
 
 .body-header-container::before {
   content: "";
   position: absolute;
-  top: 20px;
-  left: -60px;
+  top: -40px;
+  left: -80px;
   width: 28px;
   height: 28px;
   background: url("xmark.1cb672d3.svg") 100% 100% no-repeat;
+  transform: rotate(120deg);
   background-position: center;
+  transition: 450ms;
 }
 
 .body-header .logo {
@@ -123,6 +150,12 @@ body {
   justify-content: center;
 }
 
+.body-header .menu ul li {
+  position: relative;
+  left: -10px;
+  opacity: 0;
+}
+
 .body-header .menu ul > li + li {
   margin-left: 60px;
 }
@@ -141,7 +174,6 @@ body {
   min-height: calc(100vh - 100px);
   display: flex;
   align-items: center;
-  padding: 0 2em;
 }
 
 .intro-s_block {
@@ -158,7 +190,14 @@ body {
   font-family: "Nunito Bold", sans-serif;
   font-size: 70px;
   letter-spacing: 0.03em;
-  line-height: 1;
+  line-height: 0.75;
+}
+
+.intro-s_block--left h1 span {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
 }
 
 .intro-s_block--left h2 {
@@ -190,32 +229,110 @@ body {
 
 .intro-s_block--right {
   position: relative;
+  border: 1px solid red;
   min-height: 250px;
   max-height: 250px;
 }
 
-.intro-s_block--right::before {
-  content: "";
+.intro-s_block--right .intro-top-left-arrow {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(-50%, -100%);
+  transform: translate(calc(-50% - 20px), calc(-100% + 20px)) scale(0.6);
   width: 151px;
   height: 116px;
-  background: url("electro.71dcb734.svg") 100% 100% no-repeat;
-  background-position: center;
+  transform-origin: left bottom;
 }
 
-.intro-s_block--right::after {
-  content: "";
+.intro-s_block--right .intro-top-left-arrow path {
+  stroke-dasharray: 0, 300;
+}
+
+.intro-s_block--right .intro-bottom-left-controllers {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translate(50%, 100%);
-  width: 135px;
+  bottom: -20px;
+  left: 100px;
+  transform: translateY(100%);
+  width: 100px;
   height: 80px;
-  background-image: url("game_controller_black.311c99e5.svg"), url("game_controller_white.06f20485.svg");
-  background-position: center, left top;
-  background-repeat: no-repeat;
+}
+
+.intro-s_block--right .intro-bottom-left-controllers svg {
+  display: block;
+  position: absolute;
+  top: calc(50% + 15px);
+  left: calc(50% + 20px);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.intro-s_block--right .intro-bottom-left-controllers svg:nth-child(2) {
+  top: calc(50% - 20px);
+  left: calc(50% - 10px);
+}
+
+.our-games-s {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-games-s h3 {
+  font-size: 68px;
+  font-family: "NunitoSans Regular", sans-serif;
+}
+
+.our-games-s .games-preview {
+  margin-top: 150px;
+  min-height: 250px;
+}
+
+.our-games-s .games-preview .slider {
+  display: flex;
+  position: relative;
+  min-height: inherit;
+  padding: 0 40px;
+}
+
+.our-games-s .games-preview .slider .slider-el {
+  width: 50%;
+  min-height: inherit;
+  height: 300px;
+  color: #000;
+  background-color: #ccc;
+  border-radius: 40px;
+  margin: 0 40px;
+  opacity: 1;
+  transition: 300ms ease;
+  position: relative;
+  top: 0;
+}
+
+.our-games-s .games-preview .slider > ul {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.our-games-s .games-preview .slider > ul li {
+  display: block;
+  margin: 0 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 30px;
+  background-color: #000;
+  transition: 300ms ease;
+  cursor: pointer;
+}
+
+.our-games-s .games-preview .slider > ul li button {
+  display: none;
+}
+
+.our-games-s .games-preview .slider > ul li.slick-active {
+  width: 20px;
+  background-color: #fff;
 }
 /*# sourceMappingURL=index.da533f7e.css.map */

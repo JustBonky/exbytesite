@@ -1,0 +1,69 @@
+.our-games-s {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+
+    & h3 {
+        font-size: 68px;
+        font-family: 'NunitoSans Regular', sans-serif;
+    }
+
+    & .games-preview {
+        margin-top: 150px;
+        min-height: 250px;
+
+        & .slider {
+            display: flex;
+            position: relative;
+            min-height: inherit;
+            padding: 0 40px;
+
+            & .slider-el {
+                width: 50%;
+                min-height: inherit;
+                height: 300px;
+                color: #000;
+                background-color: #ccc;
+                border-radius: 40px;
+                margin: 0 40px;
+                opacity: 1;
+                transition: 300ms ease;
+                position: relative;
+                top: 0;
+
+                // &[aria-hidden='true'] {
+                //     top: 40px;
+                //     opacity: 0;
+                // }
+            }
+
+            & > ul {
+                position: absolute;
+                bottom: -70px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+
+                & li {
+                    display: block;
+                    margin: 0 7px;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 30px;
+                    background-color: #000;
+                    transition: 300ms ease;
+                    cursor: pointer;
+
+                    & button {
+                        display: none;
+                    }
+
+                    &.slick-active {
+                        width: 20px;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

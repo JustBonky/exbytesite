@@ -1,0 +1,338 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Nunito Regular";
+  src: url("Nunito-Regular.d80fa773.ttf");
+  font-weight: "400";
+  font-style: "normal";
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NunitoSans Bold";
+  src: url("NunitoSans-Bold.bbdc1ddb.ttf");
+  font-weight: 700;
+  font-style: "normal";
+  font-display: swap;
+}
+
+body {
+  color: #fff;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 20px;
+  overflow-x: hidden;
+  background-color: #19191b;
+  height: 2000px;
+  font-family: "Nunito Regular", sans-serif;
+  position: relative;
+  line-height: 1.5;
+}
+
+main {
+  margin-top: 100px !important;
+  z-index: 0;
+}
+
+.container {
+  display: block;
+  max-width: 1230px;
+  margin: 0 auto;
+  height: inherit;
+  padding: 0 15px;
+  position: relative;
+}
+
+.prm-btn {
+  padding: 5px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+.body-header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #19191b;
+}
+
+.body-header.scrolled {
+  overflow: hidden;
+}
+
+.body-header.scrolled::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  box-shadow: 0 -4px 30px 0 rgba(255, 255, 255, 0), inset 0 0 30px 0 rgba(255, 255, 255, 0.05);
+}
+
+.body-header.scrolled .body-header-container::before {
+  transform: rotate(90deg);
+  top: 25px;
+}
+
+.body-header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.body-header-container.init-header::before {
+  top: 20px;
+  transform: rotate(0deg);
+}
+
+.body-header-container::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -80px;
+  width: 28px;
+  height: 28px;
+  background: url("xmark.1cb672d3.svg") 100% 100% no-repeat;
+  transform: rotate(120deg);
+  background-position: center;
+  transition: 450ms;
+}
+
+.body-header .logo {
+  max-width: 220px;
+  max-height: 50px;
+}
+
+.body-header .logo img {
+  object-fit: cover;
+  max-height: inherit;
+}
+
+.body-header .menu {
+  position: relative;
+  left: -1.5em;
+}
+
+.body-header .menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.body-header .menu ul li {
+  position: relative;
+  left: -10px;
+  opacity: 0;
+}
+
+.body-header .menu ul > li + li {
+  margin-left: 60px;
+}
+
+.body-header .account .login-btn {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.body-header .account .login-btn svg {
+  margin-left: 10px;
+}
+
+.intro-s {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+.intro-s_block {
+  width: 50%;
+  height: 100%;
+}
+
+.intro-s_block--left {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-s_block--left h1 {
+  font-family: "Nunito Bold", sans-serif;
+  font-size: 70px;
+  letter-spacing: 0.03em;
+  line-height: 0.75;
+}
+
+.intro-s_block--left h1 span {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.intro-s_block--left h2 {
+  margin-top: 3vh;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  max-width: 72%;
+  line-height: 1.6;
+}
+
+.intro-s_block--left a {
+  color: #19191b;
+  background: #fff;
+  margin-top: 3vh;
+  align-self: flex-start;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.intro-s_block--left a span {
+  font-family: "NunitoSans Bold", sans-serif;
+}
+
+.intro-s_block--left a svg {
+  margin-left: 15px;
+}
+
+.intro-s_block--right {
+  position: relative;
+  border: 1px solid red;
+  min-height: 250px;
+  max-height: 250px;
+}
+
+.intro-s_block--right .intro-top-left-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(calc(-50% - 20px), calc(-100% + 20px)) scale(0.6);
+  width: 151px;
+  height: 116px;
+  transform-origin: left bottom;
+}
+
+.intro-s_block--right .intro-top-left-arrow path {
+  stroke-dasharray: 0, 300;
+}
+
+.intro-s_block--right .intro-bottom-left-controllers {
+  position: absolute;
+  bottom: -20px;
+  left: 100px;
+  transform: translateY(100%);
+  width: 100px;
+  height: 80px;
+}
+
+.intro-s_block--right .intro-bottom-left-controllers svg {
+  display: block;
+  position: absolute;
+  top: calc(50% + 15px);
+  left: calc(50% + 20px);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.intro-s_block--right .intro-bottom-left-controllers svg:nth-child(2) {
+  top: calc(50% - 20px);
+  left: calc(50% - 10px);
+}
+
+.our-games-s {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-games-s h3 {
+  font-size: 68px;
+  font-family: "NunitoSans Regular", sans-serif;
+}
+
+.our-games-s .games-preview {
+  margin-top: 150px;
+  min-height: 250px;
+}
+
+.our-games-s .games-preview .slider {
+  display: flex;
+  position: relative;
+  min-height: inherit;
+  padding: 0 40px;
+}
+
+.our-games-s .games-preview .slider .slider-el {
+  width: 50%;
+  min-height: inherit;
+  height: 300px;
+  color: #000;
+  background-color: #ccc;
+  border-radius: 40px;
+  margin: 0 40px;
+  opacity: 1;
+  transition: 300ms ease;
+  position: relative;
+  top: 0;
+}
+
+.our-games-s .games-preview .slider > ul {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.our-games-s .games-preview .slider > ul li {
+  display: block;
+  margin: 0 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 30px;
+  background-color: #000;
+  transition: 300ms ease;
+  cursor: pointer;
+}
+
+.our-games-s .games-preview .slider > ul li button {
+  display: none;
+}
+
+.our-games-s .games-preview .slider > ul li.slick-active {
+  width: 20px;
+  background-color: #fff;
+}
+/*# sourceMappingURL=index.da533f7e.css.map */

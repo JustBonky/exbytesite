@@ -1,3 +1,6 @@
-/layout/.parcel-cache
-/layout/dist
-layout/package-lock.json
+layout/.parcel-cache
+**/*-cache/
+.parcel-cache
+# /layout/dist
+/layout/node_modules/
+# layout/package-lock.json

@@ -1,0 +1,17 @@
+.news-s {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+
+    & h3 {
+        font-size: 55px;
+        font-family: 'NunitoSans Regular', sans-serif;
+    }
+
+    &_slider {
+        margin-top: 60px;
+        min-width: 300px;
+        border: 1px solid red;
+    }
+}

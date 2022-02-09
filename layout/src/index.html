@@ -146,10 +146,29 @@
         <section class="news-s">
             <h3>News</h3>
             <div class="news-s_slider">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+                <div class="news-s_slider_item">
+                    <p>News number 1</p>
+                    <p>Description to this post item</p>
+                    <div class="bg"></div>
+                </div>
+                <div class="news-s_slider_item">
+                    <p>News number 2</p>
+                    <p>Description to this post item</p>
+                    <div class="bg"></div>
+
+                </div>
+                <div class="news-s_slider_item">
+                    <p>News number 3</p>
+                    <p>Description to this post item</p>
+                    <div class="bg"></div>
+
+                </div>
+                <div class="news-s_slider_item">
+                    <p>News number 4</p>
+                    <p>Description to this post item</p>
+                    <div class="bg"></div>
+
+                </div>
             </div>
         </section>
 
@@ -158,11 +177,33 @@
                 <p>Contact us for the service</p>
                 <p>you want to use</p>
             </h3>
-            <a href="#" class="prm-btn">Contact us</a>
+            <a href="#" class="prm-btn-white">Contact us</a>
         </section>
     </main>
 
-    <footer>Footer</footer>
+    <footer id="body-footer" class="body-footer">
+        <div class="container body-footer-container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Exbyte Studios logo">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="rights">
+                © 2022 Exbyte Studios, All Rights Reserved
+            </div>
+        </div>
+    </footer>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -179,6 +220,17 @@
             slidesToShow: 2
         });
     </script>
+
+    <script>
+        $('.news-s_slider').slick({
+            dots: true,
+            arrows: false,
+            speed: 1000,
+            slidesToShow: 3
+        });
+    </script>
+
+
     <script>
 
         console.log(gsap)

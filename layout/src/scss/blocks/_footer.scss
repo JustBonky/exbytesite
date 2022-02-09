@@ -1,0 +1,25 @@
+.body-footer {
+    margin-top: 100px;
+    padding: 4em 0;
+    font-family: "NunitoSans Regular", sans-serif;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px;
+    }
+
+    & .menu ul {
+        display: flex;
+        color: $black-op07;
+
+        & > li + li {
+            margin-left: 50px;
+        }
+    }
+
+    & .rights {
+        color: $black-op07;
+    }
+}

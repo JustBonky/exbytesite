@@ -32,3 +32,12 @@ main {
     border: 1px solid $white;
     border-radius: 5px;
 }
+
+.prm-btn-white {
+    padding: 10px 40px;
+    border-radius: 5px;
+    background: #fff;
+    color: #000 !important;
+    font-weight: bold;
+    font-family: "NunitoSans Bold", sans-serif;
+}

@@ -12,24 +12,30 @@
         margin-top: 100px;
         min-height: 250px;
 
-        & .slider {
+        & .games-carousel {
             display: flex;
             position: relative;
             min-height: inherit;
             padding: 0 40px;
 
-            & .slider-el {
-                width: 50%;
-                min-height: inherit;
-                height: 300px;
+            & .owl-stage {
+                height: 100%;
+            }
+
+            & .owl-item {
+                // min-width: 50%;
+                // min-height: inherit;
+                height: 100%;
                 color: #000;
                 background-color: #ccc;
                 border-radius: 40px;
-                margin: 0 40px;
-                opacity: 1;
-                transition: 300ms ease;
-                position: relative;
-                top: 0;
+                // margin: 0 40px;
+                // opacity: 1;
+                // transition: 300ms ease;
+                // position: relative;
+                // top: 0;
+
+                border: 1px solid red;
 
                 // &[aria-hidden='true'] {
                 //     top: 40px;
@@ -37,14 +43,14 @@
                 // }
             }
 
-            & > ul {
+            & > .owl-dots  {
                 position: absolute;
                 bottom: -70px;
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;
 
-                & li {
+                & .owl-dot {
                     display: block;
                     margin: 0 7px;
                     width: 8px;
@@ -54,11 +60,11 @@
                     transition: 300ms ease;
                     cursor: pointer;
 
-                    & button {
+                    & span {
                         display: none;
                     }
 
-                    &.slick-active {
+                    &.active {
                         width: 20px;
                         background-color: #fff;
                     }

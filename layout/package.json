@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "start": "npx parcel src/*.html -p 3000",
+    "start": "npx parcel src/*.html -p 4001",
     "build": "parcel build src/*.html"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.2.1",
+    "jquery": "^3.6.0",
     "parcel": "^2.2.1"
   }
 }

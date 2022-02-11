@@ -15,31 +15,24 @@
                 font-family: 'Nunito Bold', sans-serif;
                 font-size: 70px;
                 letter-spacing: 0.03em;
-                line-height: 0.75;
+                line-height: 1;
 
-                // &.displayed {
-                //     & span::before {
-                //         top: 200%;
-                //     }
-                // }
-
-                & span {
+                & p {
                     display: inline-block;
                     position: relative;
                     overflow: hidden;
-                    padding: 10px 0;
+                    // padding: 17px 0;
 
-                    // &::before {
-                    //     content: '';
-                    //     position: absolute;
-                    //     top: 50%;
-                    //     left: 0;
-                    //     width: 100%;
-                    //     height: 110%;
-                    //     background: rgb(255, 255, 255);
-                    //     transform: translateY(-50%);
-                    //     transition: 1.6s ease-out 50ms;
-                    // }
+                    & span {
+                        position: absolute;
+                        display: inline-block;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #fff;
+                        z-index: 1;
+                    }
                 }
             }
 
@@ -76,7 +69,7 @@
 
         &--right {
             position: relative;
-            border: 1px solid red;
+            // border: 1px solid red;
             min-height: 250px;
             max-height: 250px;
 

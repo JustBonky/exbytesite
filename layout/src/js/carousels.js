@@ -1,11 +1,11 @@
 $(document).ready(function () {
     $(".games-carousel").owlCarousel({
         loop: true,
-        margin: 40,
+        margin: 100,
         items: 2,
-        animateOut: "slideOutDown",
-        animateIn: "flipInX",
-        smartSpeed: 1000,
+        animateOut: "animate__fadeOutDown",
+        animateIn: "animate__fadeInDown",
+        smartSpeed: 500,
         dots: true,
         dotsEach: true,
 		// autoplay: true,

@@ -15,23 +15,36 @@
                 font-family: 'Nunito Bold', sans-serif;
                 font-size: 70px;
                 letter-spacing: 0.03em;
-                line-height: 1;
+                line-height: 0.8;
 
-                & p {
+                & .stroke-item + .stroke-item {
+                    margin-top: 10px;
+                }
+
+                & .stroke-item {
                     display: inline-block;
                     position: relative;
                     overflow: hidden;
-                    // padding: 17px 0;
 
-                    & span {
+                    & div {
                         position: absolute;
                         display: inline-block;
                         top: 0;
                         left: 0;
-                        width: 100%;
+                        width: 0;
                         height: 100%;
-                        background: #fff;
+                        background: rgb(255, 255, 255);
                         z-index: 1;
+                    }
+
+                    & span {
+                        line-height: 1.2;
+                        display: inline-block;
+                        opacity: 0;
+
+                        & + span {
+                            margin-top: 10px;
+                        }
                     }
                 }
             }
@@ -101,15 +114,15 @@
                     display: block;
                     // border: 1px solid yellow;
                     position: absolute;
-                    top: calc(50% + 15px);
-                    left: calc(50% + 20px);
+                    top: calc(50% + 45px);
+                    left: calc(50% + 50px);
                     transform: translate(-50%, -50%);
                     opacity: 0;
                 }
 
                 & svg:nth-child(2) {
-                    top: calc(50% - 20px);
-                    left: calc(50% - 10px);
+                    top: calc(50% - 40px);
+                    left: calc(50% - 20px);
                 }
             }
         }

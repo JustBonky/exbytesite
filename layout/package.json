@@ -2,10 +2,14 @@
   "private": true,
   "scripts": {
     "start": "npx parcel src/*.html -p 4001",
-    "build": "npx parcel build src/*.html"
+    "build": "npx parcel build src/*.html",
+    "serve": "surge"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.2.1",
     "parcel": "^2.2.1"
+  },
+  "dependencies": {
+    "surge": "^0.23.1"
   }
 }

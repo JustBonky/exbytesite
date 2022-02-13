@@ -7,3 +7,27 @@
         font-display: swap;
     }
 }
+
+@mixin media1200 {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media480 {
+    @media (max-width: 480px) {
+        @content;
+    }
+}

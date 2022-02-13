@@ -5,10 +5,13 @@ body {
     font-size: 20px;
     overflow-x: hidden;
     background-color: $black;
-    // height: 2000px;
     font-family: 'Nunito Regular', sans-serif;
     position: relative;
     line-height: 1.5;
+
+    @include media1200 {
+        font-size: 18px;
+    }
 }
 
 main {
@@ -40,4 +43,10 @@ main {
     color: #000 !important;
     font-weight: bold;
     font-family: "NunitoSans Bold", sans-serif;
+}
+
+section > h3 {
+    @include media1200 {
+        margin-left: 50px;
+    }
 }

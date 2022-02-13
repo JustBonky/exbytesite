@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+    window.media1200 = 1200;
+    window.media1024 = 1024;
+    window.media768  = 768;
+})
+
+
 const aft = document.querySelector('.body-header');
 
 const tl = gsap.timeline({

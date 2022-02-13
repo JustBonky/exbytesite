@@ -1,26 +1,38 @@
-gsap.to('.intro-top-left-arrow', 1.5, {
-    ease: 'expo',
-    transform: 'translate(-50%, -100%) scale(1)',
+
+
+const introBgTl = gsap.timeline({
+    defaults: {
+        duration: 1.5,
+        ease: Back.easeInOut
+    },
+    onComplete: test,
 })
 
-gsap.to('.intro-top-left-arrow path', 1.3, {
-    strokeDasharray: '300, 300',
-    ease: 'rough',
-})
 
-gsap.to('.intro-bottom-left-controllers svg:nth-child(1)', 0.7, {
-    top: 'calc(50% + 0px)',
-    left: 'calc(50% + 0px)',
+introBgTl.to('.intro-top-left-arrow', {
+    scale: 1,
+    left: '+=15',
+    top: '-=15'
+}, 0)
+
+introBgTl.to('.intro-top-left-arrow path', {
+    strokeDasharray: '300, 300'
+}, 0)
+
+
+introBgTl.to('.intro-bottom-left-controllers svg:nth-child(1)', {
+    top: 10,
+    left: 25,
     opacity: 1,
-    ease: 'rough',
-})
+    ease: Expo.easeInOut
+}, 0)
 
-gsap.to('.intro-bottom-left-controllers svg:nth-child(2)', 0.7, {
-    top: 'calc(50% - 8px)',
-    left: 'calc(50% - 27px)',
+introBgTl.to('.intro-bottom-left-controllers svg:nth-child(2)', 0.7, {
+    top: 0,
+    left: 0,
     opacity: 1,
-    ease: 'rough',
-})
+    ease: Expo.easeInOut
+}, 0)
 
 
 
@@ -63,15 +75,22 @@ tlTitle.to('h1 .stroke-item div', {
 // })
 
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
+
+//     console.log('dom loaded')
+
+//     initParallax();
+//     document.addEventListener('mousemove', mouseParallax);
+//     // document.addEventListener('scroll', scrollParallax)
+// });
+
+function test() {
     initParallax();
-
     document.addEventListener('mousemove', mouseParallax);
-    // document.addEventListener('scroll', scrollParallax)
-});
+}
 
-var cursorX = 0; var cursorY = 0;
-var offsetX = 0; var offsetY = 0;
+var cursorX = window.innerWidth / 2; var cursorY = window.innerHeight / 2;
+var offsetX = window.innerWidth / 2; var offsetY = window.innerHeight / 2;
 var depthXY = 0;
 var scenes;
 var layers;
@@ -80,7 +99,6 @@ var layers;
 function initParallax() {
     scenes = document.querySelectorAll('.intro-s_block--right');
     layers = document.querySelectorAll('.intro-s_block--right div');
-    console.log(layers)
 }
 
 // Called on scroll
@@ -97,13 +115,15 @@ function mouseParallax(event) {
 
 //Mouse move Parallax 
 function mP(event) {
-    cursorX = event.clientX;
+    cursorX = event.clientX; // 960
     cursorY = event.clientY;
     for (i = 0; i < layers.length; i++) {
         depthXY = 0.3;
-        offsetX = ((cursorX * depthXY) / 8);
-        offsetY = ((cursorY * depthXY) / 8);
+        offsetX = ((cursorX * depthXY) / 12);
+        offsetY = ((cursorY * depthXY) / 12);
         layers[i].style.transform = 'translate3d(' + offsetX + 'px,' + offsetY + 'px,0px)';
+        // layers[i].style.left = offsetX + 'px'
+        // layers[i].style.top = offsetY + 'px'
     }
 }
 

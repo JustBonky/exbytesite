@@ -1,11 +1,8 @@
-.intro-s {
+.intro-section {
     min-height: calc(100vh - 100px);
     display: flex;
     align-items: center;
-
-    @include media1200 {
-        padding: 0 30px;
-    }
+    margin-top: 100px;
 
     &_block {
         width: 50%;
@@ -15,30 +12,14 @@
             display: flex;
             flex-direction: column;
 
-            @include media1024 {
-                width: 100%;
-            }
-
             & h1 {
                 font-family: 'Nunito Bold', sans-serif;
                 font-size: 70px;
                 letter-spacing: 0.03em;
-                line-height: 0.8;
-
-                @include media1024 {
-                    max-width: 70%;
-                }
-
-                @include media1200 {
-                    font-size: 65px;
-                }
+                line-height: 0.7;
 
                 & .stroke-item + .stroke-item {
                     margin-top: 10px;
-
-                    @include media1200 {
-                        margin-top: 6px;
-                    }
                 }
 
                 & .stroke-item {
@@ -106,10 +87,6 @@
             max-height: 250px;
             border: 1px solid red;
             border-radius: 100px;
-
-            @include media1024 {
-                display: none;
-            }
 
             & > div {
                 transition: 200ms ease;

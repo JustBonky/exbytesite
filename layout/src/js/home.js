@@ -1,5 +1,3 @@
-
-
 const introBgTl = gsap.timeline({
     defaults: {
         duration: 1.5,
@@ -142,3 +140,14 @@ function sP($object, multiplier) {
 if (typeof window.getComputedStyle(document.body).backgroundBlendMode == 'undefined') {
     document.documentElement.className += " no-background-blend-mode";
 }
+
+// gsap.to('#our-games-section', {
+//     scrollTrigger: {
+//         trigger: '#our-games-section',
+//         markers: true,
+//         start: 'top top',
+//         bottom: 'bottom bottom',
+//     },
+//     opacity: 1,
+//     x: 400
+// });

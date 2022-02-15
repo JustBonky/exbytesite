@@ -1,5 +1,4 @@
-.news-s {
-    margin-top: 200px;
+.news-section {
     display: flex;
     flex-direction: column;
 
@@ -12,20 +11,12 @@
         margin-top: 100px;
         min-height: 500px;
 
-        @include media1200 {
-            min-height: 400px;
-        }
-
         & .news_slider{
             margin: 0 auto;
             max-width: 1200px;
             display: flex;
             position: relative;
             min-height: inherit;
-
-            @include media1200 {
-                max-width: 940px;
-            }
 
             & .owl-stage {
                 height: 100%;

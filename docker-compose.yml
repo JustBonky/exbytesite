@@ -11,12 +11,13 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: parol12345
       MYSQL_DATABASE: es_wp
+    command: '--default-authentication-plugin=mysql_native_password'
 
   wordpress:
     container_name: wordpress
     depends_on:
       - db
-    image: wordpress:5.0
+    image: wordpress:5.9-php7.4-apache
     volumes:
       - ./:/var/www/html
     ports:

@@ -1,0 +1,1 @@
+старт докер контайнера docker-compose up -d --remove-orphans

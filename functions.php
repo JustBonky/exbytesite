@@ -4,6 +4,9 @@ add_action( 'init', 'exbyte_theme_register_post_types' );
 
 function exbyte_theme_register_post_types() {
 
+
+	load_theme_textdomain( 'exbyte-theme', get_template_directory() . '/languages' );
+
 	register_post_type(
 		'exbyte_theme_news',
 		[
@@ -16,10 +19,10 @@ function exbyte_theme_register_post_types() {
 			'menu_icon' => 'dashicons-format-gallery',
 			'supports' => [
 				'title',
+				'editor',
 				'thumbnail',
 				'author',
-				'excerpt',
-				'page-attributes'
+				'excerpt'
 			],
 			'rewrite' => [
 				'slug' => 'news',

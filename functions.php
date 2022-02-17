@@ -1,5 +1,36 @@
 <?php
 
+add_action( 'init', 'exbyte_theme_register_post_types' );
+
+function exbyte_theme_register_post_types() {
+
+	register_post_type(
+		'exbyte_theme_news',
+		[
+			'labels' => [
+				'name' => 'Новости',
+				'add_new' => 'Добавить новость'
+			],
+			'public' => true,
+			'menu_position' => 2,
+			'menu_icon' => 'dashicons-format-gallery',
+			'supports' => [
+				'title',
+				'thumbnail',
+				'author',
+				'excerpt',
+				'page-attributes'
+			],
+			'rewrite' => [
+				'slug' => 'news',
+			],
+			'has_archive' => true
+		]
+	);
+
+};
+
+
 /**
  * exbyte-theme functions and definitions
  *
@@ -47,6 +78,7 @@ function exbyte_theme_setup()
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support('post-thumbnails');
+
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -101,8 +133,6 @@ function exbyte_theme_setup()
 			'flex-height' => true,
 		)
 	);
-
-	// add_theme_support('menus');
 }
 add_action('after_setup_theme', 'exbyte_theme_setup');
 

@@ -1,27 +1,21 @@
 <?php
 
-add_action( 'init', 'exbyte_theme_register_post_types' );
-
-function exbyte_theme_register_post_types() {
-
-
-	load_theme_textdomain( 'exbyte-theme', get_template_directory() . '/languages' );
+add_action('init', function() {
 
 	register_post_type(
-		'exbyte_theme_news',
+		'es_news',
 		[
 			'labels' => [
 				'name' => 'Новости',
 				'add_new' => 'Добавить новость'
 			],
-			'public' => true,
-			'menu_position' => 2,
+			'public' => true, // !!!
+			'menu_position' => 4,
 			'menu_icon' => 'dashicons-format-gallery',
 			'supports' => [
 				'title',
 				'editor',
 				'thumbnail',
-				'author',
 				'excerpt'
 			],
 			'rewrite' => [
@@ -31,7 +25,57 @@ function exbyte_theme_register_post_types() {
 		]
 	);
 
-};
+	register_post_type(
+		'es_press-kits', // length no more 20 !!!
+		[
+			'labels' => [
+				'name' => 'Пресса',
+				'add_new' => 'Добавить новый',
+				'add_new_item' => 'Добавить новый элемент прессы',
+			],
+			'public' => true,
+			'menu_position' => 4,
+			'menu_icon' => 'dashicons-share',
+			'supports' => [
+				'title',
+				'editor',
+				'thumbnail',
+			],
+			'rewrite' => [
+				'slug' => 'press-kits',
+			],
+			'has_archive' => true,
+			'hierarchical' => true
+		]
+	);
+
+
+	register_post_type(
+		'es_games', // length no more 20 !!!
+		[
+			'labels' => [
+				'name' => 'Игры',
+				'add_new' => 'Добавить новую',
+				'add_new_item' => 'Добавить новую игру',
+			],
+			'public' => true,
+			'menu_position' => 5,
+			'menu_icon' => 'dashicons-buddicons-activity',
+			'supports' => [
+				'title',
+				'editor',
+				'thumbnail',
+				'excerpt',
+				'custom-fields'
+			],
+			'rewrite' => [
+				'slug' => 'games',
+			],
+			'has_archive' => true
+		]
+	);
+
+});
 
 
 /**

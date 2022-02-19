@@ -4,32 +4,53 @@ get_header();
 
 <?php
 
-$params = array(
+$news = new WP_Query([
     'post_type'   => 'es_press-kits',
     'post_status' => 'publish'
-);
-
-$news = new WP_Query($params);
+]);
 
 if ($news->have_posts()) :
 
 ?>
+    <style>
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul img {
+            display: block;
+            max-width: 100%;
+            object-fit: contain;
+            max-width: 400px;
+        }
+    </style>
+
     <ul>
-        <?php
-        while ($news->have_posts()) :
-            $news->the_post();
-        ?>
-            <li>
-                <p><?= get_the_title(); ?></p>
+        <?php while ($news->have_posts()) : $news->the_post(); ?>
+
+            <li style='border: 2px solid green;'>
+                <p>
+                    <?= get_the_title(); ?>
+                </p>
+                <p>
+                    <?php the_post_thumbnail(); ?>
+                </p>
+                <div>
+                    <a href="<?= get_post_meta(get_the_ID(), 'pack', TRUE); ?>" download="true">Download</a>
+                </div>
             </li>
-        <?php
-        endwhile;
-        wp_reset_postdata();
-        ?>
+
+        <?php endwhile; ?>
     </ul>
 <?php
 else :
-    __('No press yet!', 'exbyte-theme');
+?>
+    <h1>No press yet</h1>
+<?php
 endif;
 ?>
 

@@ -1,1 +1,0 @@
-<h1>Single exbyte_theme_press</h1>

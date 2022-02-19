@@ -1,6 +1,8 @@
 <?php
 
-add_action('init', function() {
+
+
+add_action('init', function () {
 
 	register_post_type(
 		'es_news',
@@ -34,21 +36,19 @@ add_action('init', function() {
 				'add_new_item' => 'Добавить новый элемент прессы',
 			],
 			'public' => true,
+			'has_archive' => true,
 			'menu_position' => 4,
 			'menu_icon' => 'dashicons-share',
 			'supports' => [
 				'title',
-				'editor',
 				'thumbnail',
+				'custom-fields',
 			],
 			'rewrite' => [
 				'slug' => 'press-kits',
-			],
-			'has_archive' => true,
-			'hierarchical' => true
+			]
 		]
 	);
-
 
 	register_post_type(
 		'es_games', // length no more 20 !!!
@@ -76,6 +76,21 @@ add_action('init', function() {
 	);
 
 });
+
+
+add_action(
+	'template_redirect',
+	function () {
+		if (is_singular('es_press-kits')) {
+			global $wp_query;
+			$wp_query->posts = [];
+			$wp_query->post = null;
+			$wp_query->set_404();
+			status_header(404);
+			nocache_headers();
+		}
+	}
+);
 
 
 /**

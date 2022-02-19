@@ -14,9 +14,9 @@
 
             & h1 {
                 font-family: 'Nunito Bold', sans-serif;
-                font-size: 70px;
-                letter-spacing: 0.03em;
-                line-height: 0.7;
+                font-size: 60px;
+                letter-spacing: 0.05em;
+                line-height: 0.5;
 
                 & .stroke-item + .stroke-item {
                     margin-top: 10px;
@@ -41,7 +41,7 @@
                     & span {
                         line-height: 1.2;
                         display: inline-block;
-                        opacity: 0;
+                        // opacity: 0;
 
                         & + span {
                             margin-top: 10px;

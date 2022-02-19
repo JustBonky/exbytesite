@@ -10,12 +10,16 @@ body {
     line-height: 1.5;
 }
 
-main {
-    z-index: 0;
+main section {
+    margin-top: 200px;
+}
 
-    & section {
-        margin-top: 200px;
-    }
+.section-title {
+    font-size: $sectionTitle;
+    color: $white;
+    padding-left: $sectionTitlePadding;
+    font-family: 'NunitoSans Regular', sans-serif;
+    letter-spacing: 0.05em;
 }
 
 

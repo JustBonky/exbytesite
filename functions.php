@@ -41,8 +41,8 @@ add_action('init', function () {
 			'menu_icon' => 'dashicons-share',
 			'supports' => [
 				'title',
-				'thumbnail',
-				'custom-fields',
+				'editor',
+				'thumbnail'
 			],
 			'rewrite' => [
 				'slug' => 'press-kits',
@@ -75,13 +75,35 @@ add_action('init', function () {
 		]
 	);
 
+
+	register_post_type(
+		'es_find-us-blocks', // length no more 20 !!!
+		[
+			'labels' => [
+				'name' => 'Соц. сети',
+				'add_new' => 'Добавить новую',
+				'add_new_item' => 'Добавить новую соц. сеть',
+			],
+			'public' => true,
+			'menu_position' => 6,
+			'menu_icon' => 'dashicons-twitter',
+			'supports' => [
+				'title',
+				'thumbnail',
+				'custom-fields'
+			]
+		]
+	);
 });
 
 
 add_action(
 	'template_redirect',
 	function () {
-		if (is_singular('es_press-kits')) {
+		if (
+			is_singular('es_press-kits') &&
+			is_singular('attachment')
+		) {
 			global $wp_query;
 			$wp_query->posts = [];
 			$wp_query->post = null;
@@ -240,14 +262,39 @@ function exbyte_theme_scripts()
 
 	wp_enqueue_style('exbyte-theme-style', get_stylesheet_uri(), [], _S_VERSION);
 
+
+	if (!is_admin()) {
+		// Remove default WordPress jQuery
+		wp_deregister_script('jquery');
+		// Register new jQuery script via Google Library    
+		wp_register_script('jquery',  get_template_directory_uri() . '/assets/js/libs/jquery.js', false, '3.6.0');
+		// Enqueue the script   
+		wp_enqueue_script('jquery');
+	}
+
+	wp_enqueue_script(
+		'es-owl-carousel',
+		get_template_directory_uri() . '/assets/js/libs/owl.carousel.min.js',
+		['jquery'],
+		_S_VERSION,
+		true
+	);
+
+	if (is_front_page()) {
+
+		wp_enqueue_script(
+			'es-carousels',
+			get_template_directory_uri() . '/assets/js/carousels.js',
+			['jquery', 'es-owl-carousel'],
+			_S_VERSION,
+			false
+		);
+	}
+
+
 	wp_enqueue_style('exbyte-theme-index-css', get_template_directory_uri() . '/assets/css/index.css', [], _S_VERSION);
 
-	wp_enqueue_script('exbyte-theme-navigation', get_template_directory_uri() . '/js/navigation.js', [], _S_VERSION, true);
-
-
-	if (is_singular() && comments_open() && get_option('thread_comments')) {
-		wp_enqueue_script('comment-reply');
-	}
+	wp_enqueue_style('es-owl-css', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', [], _S_VERSION);
 }
 add_action('wp_enqueue_scripts', 'exbyte_theme_scripts');
 

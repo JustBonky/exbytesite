@@ -1,1 +1,16 @@
+@import 'vars.scss';
+@import 'reset.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
 @import 'global.scss';
+
+// other blocks
+@import 'blocks/header.scss';
+@import 'blocks/intro.scss';
+@import 'blocks/our-games.scss';
+@import 'blocks/find-us.scss';
+@import 'blocks/news.scss';
+@import 'blocks/conclusion.scss';
+@import 'blocks/footer.scss';
+@import 'blocks/press-kits.scss';
+@import 'blocks/not-found.scss';

@@ -26,7 +26,7 @@ if ($news->have_posts()) :
                 <p><?= the_excerpt(); ?></p>
                 <p><?= get_the_content(); ?></p>
                 <p>
-                    <img src="<?php the_post_thumbnail(); ?>" />
+                    <?php the_post_thumbnail(); ?>
                 </p>
             </li>
         <?php

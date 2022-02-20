@@ -1,0 +1,28 @@
+.conclusion-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7em 0;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100%;
+        background: #000;
+        z-index: -1;
+    }
+
+    & .conclusion-title {
+        padding-left: 0;
+    }
+    
+    &_slider {
+        min-width: 300px;
+        border: 1px solid red;
+    }
+}

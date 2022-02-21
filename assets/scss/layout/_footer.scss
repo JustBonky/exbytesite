@@ -4,9 +4,7 @@
     font-family: "NunitoSans Regular", sans-serif;
 
     & .logo {
-        @include media1200 {
-            transform: scale(0.85);
-        }
+        transform: scale(0.8);
     }
 
     &-container {
@@ -20,10 +18,6 @@
         display: flex;
         color: $black-op07;
 
-        @include media1200 {
-            font-size: 16px;
-        }
-
         & > li + li {
             margin-left: 50px;
 
@@ -35,8 +29,5 @@
 
     & .rights {
         color: $black-op07;
-        @include media1200 {
-            font-size: 16px;
-        }
     }
 }

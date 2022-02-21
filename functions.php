@@ -71,7 +71,8 @@ add_action('init', function () {
 			'rewrite' => [
 				'slug' => 'games',
 			],
-			'has_archive' => true
+			'has_archive' => true,
+			'taxonomies'  => array('category'),
 		]
 	);
 
@@ -101,7 +102,7 @@ add_action(
 	'template_redirect',
 	function () {
 		if (
-			is_singular('es_press-kits') &&
+			is_singular('es_press-kits') ||
 			is_singular('attachment')
 		) {
 			global $wp_query;

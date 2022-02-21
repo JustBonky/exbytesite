@@ -4,13 +4,17 @@
 @import 'fonts.scss';
 @import 'global.scss';
 
-// other blocks
-@import 'blocks/header.scss';
-@import 'blocks/intro.scss';
-@import 'blocks/our-games.scss';
-@import 'blocks/find-us.scss';
-@import 'blocks/news.scss';
-@import 'blocks/conclusion.scss';
-@import 'blocks/footer.scss';
-@import 'blocks/press-kits.scss';
-@import 'blocks/not-found.scss';
+// Layout
+@import 'layout/header.scss';
+@import 'layout/footer.scss';
+@import 'layout/not-found.scss';
+
+// Home page
+@import 'pages/home/intro.scss';
+@import 'pages/home/our-games.scss';
+@import 'pages/home/find-us.scss';
+@import 'pages/home/news.scss';
+@import 'pages/home/conclusion.scss';
+
+// Press kit page
+@import 'pages/press-kit/press-kits.scss';

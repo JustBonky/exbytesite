@@ -28,29 +28,6 @@ add_action('init', function () {
 	);
 
 	register_post_type(
-		'es_press-kits', // length no more 20 !!!
-		[
-			'labels' => [
-				'name' => 'Пресса',
-				'add_new' => 'Добавить новый',
-				'add_new_item' => 'Добавить новый элемент прессы',
-			],
-			'public' => true,
-			'has_archive' => true,
-			'menu_position' => 4,
-			'menu_icon' => 'dashicons-share',
-			'supports' => [
-				'title',
-				'editor',
-				'thumbnail'
-			],
-			'rewrite' => [
-				'slug' => 'press-kits',
-			]
-		]
-	);
-
-	register_post_type(
 		'es_games', // length no more 20 !!!
 		[
 			'labels' => [
@@ -63,10 +40,8 @@ add_action('init', function () {
 			'menu_icon' => 'dashicons-buddicons-activity',
 			'supports' => [
 				'title',
-				'editor',
-				'thumbnail',
-				'excerpt',
-				'custom-fields'
+				// 'excerpt',
+				// 'custom-fields'
 			],
 			'rewrite' => [
 				'slug' => 'games',
@@ -114,7 +89,6 @@ add_action(
 		}
 	}
 );
-
 
 /**
  * exbyte-theme functions and definitions

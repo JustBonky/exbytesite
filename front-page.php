@@ -2,7 +2,7 @@
 
 get_header();
 
-$news = new WP_Query([
+$games = new WP_Query([
     'post_type'   => 'es_games',
     'post_status' => 'publish'
 ]);
@@ -65,15 +65,15 @@ $news = new WP_Query([
         <h3 class="section-title our-games-title">Our games</h3>
         <div class="games-preview">
             <div class="games-carousel owl-carousel owl-theme">
-                <?php if ($news->have_posts()) : ?>
-                    <?php while ($news->have_posts()) : $news->the_post(); ?>
+                <?php if ($games->have_posts()) :  ?>
+                    <?php while ($games->have_posts()) : $games->the_post(); ?>
 
                         <div class="slider-el">
                             <div class="game-title">
-                                <?= get_the_title(); ?>
+                                <?= CFS()->get('game-name'); ?>
                             </div>
                             <div class="game-image">
-                                <?php the_post_thumbnail(); ?>
+                                <img src="<?= CFS()->get('preview-image'); ?>" alt="">
                             </div>
                         </div>
 

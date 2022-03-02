@@ -255,6 +255,14 @@ function exbyte_theme_scripts()
 		true
 	);
 
+	wp_enqueue_script(
+		'canvas-bg',
+		get_template_directory_uri() . '/assets/js/canvas-bg.min.js',
+		[],
+		_S_VERSION,
+		true
+	);
+
 	if (is_front_page()) {
 
 		wp_enqueue_script(

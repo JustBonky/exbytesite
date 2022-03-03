@@ -32,11 +32,15 @@ $games = new WP_Query([
                         </div>
 
                         <div class="press-kit-image">
-                            <img src="<?= CFS()->get('preview-image'); ?>" alt="">
+                            <?= wp_get_attachment_image(CFS()->get('preview-image'), 'full'); ?>
                         </div>
 
                         <div class="press-kit-download-btn">
-                            <a class="prm-btn-white" href="<?= CFS()->get('archive-file'); ?>" download="true" target="_blank">
+                            <a
+                                class="prm-btn-white"
+                                href="<?= CFS()->get('archive-file'); ?>"
+                                target="_blank"
+                            >
                                 Download
                             </a>
                         </div>

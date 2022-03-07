@@ -234,16 +234,16 @@ add_action('widgets_init', 'exbyte_theme_widgets_init');
  */
 function exbyte_theme_scripts()
 {
-
 	wp_enqueue_style('exbyte-theme-style', get_stylesheet_uri(), [], _S_VERSION);
 
-
 	if (!is_admin()) {
-		// Remove default WordPress jQuery
 		wp_deregister_script('jquery');
-		// Register new jQuery script via Google Library    
-		wp_register_script('jquery',  get_template_directory_uri() . '/assets/js/libs/jquery.js', false, '3.6.0');
-		// Enqueue the script   
+		wp_register_script(
+			'jquery',
+			get_template_directory_uri() . '/assets/js/libs/jquery.js',
+			false,
+			'3.6.0'
+		);
 		wp_enqueue_script('jquery');
 	}
 
@@ -255,22 +255,21 @@ function exbyte_theme_scripts()
 		true
 	);
 
-	wp_enqueue_script(
-		'canvas-bg',
-		get_template_directory_uri() . '/assets/js/canvas-bg.min.js',
-		[],
-		_S_VERSION,
-		true
-	);
+	// wp_enqueue_script(
+	// 	'canvas-bg',
+	// 	get_template_directory_uri() . '/assets/js/canvas-bg.min.js',
+	// 	['jquery'],
+	// 	_S_VERSION,
+	// 	true
+	// );
 
 	if (is_front_page()) {
-
 		wp_enqueue_script(
 			'es-carousels',
 			get_template_directory_uri() . '/assets/js/carousels.js',
 			['jquery', 'es-owl-carousel'],
 			_S_VERSION,
-			false
+			true
 		);
 	}
 

@@ -2,12 +2,6 @@
 
 get_header();
 
-$games = new WP_Query([
-    'post_type'   => 'es_games',
-    'post_status' => 'publish'
-]);
-
-
 ?>
 
 <main class="body-content container" id="body-content" role="main">
@@ -65,27 +59,31 @@ $games = new WP_Query([
         <h3 class="section-title our-games-title">Our games</h3>
         <div class="games-preview">
             <div class="games-carousel owl-carousel owl-theme">
+                <?php
+                $games = new WP_Query([
+                    'post_type'   => 'es_games',
+                    'post_status' => 'publish'
+                ]);
+                ?>
                 <?php if ($games->have_posts()) :  ?>
                     <?php while ($games->have_posts()) : $games->the_post(); ?>
 
                         <div class="slider-el">
-                            <div class="game-title">
-                                <?= CFS()->get('game-name'); ?>
-                            </div>
-                            <div class="game-image">
-                                <img src="<?= CFS()->get('preview-image'); ?>" alt="">
-                            </div>
+                            <a href="<?= get_post_permalink() ?>">
+                                <div class="game-title">
+                                    <?= CFS()->get('game-name'); ?>
+                                </div>
+                                <div class="game-image">
+                                    <?= wp_get_attachment_image(CFS()->get('preview-image'), 'full'); ?>
+                                </div>
+                            </a>
                         </div>
+
 
                     <?php endwhile; ?>
                 <?php else : ?>
                     <h2>No games yet</h2>
                 <?php endif; ?>
-
-                <!-- <div class="slider-el">111</div>
-                <div class="slider-el">222</div>
-                <div class="slider-el">Third</div>
-                <div class="slider-el">Forth</div> -->
             </div>
         </div>
     </section>

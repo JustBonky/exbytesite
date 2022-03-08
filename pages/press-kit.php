@@ -9,19 +9,19 @@
 
 <?php
 get_header();
-
-$games = new WP_Query([
-    'post_type'   => 'es_games',
-    'post_status' => 'publish'
-]);
-
 ?>
 
 <main class="body-content container" id="body-content" role="main">
 
-    <section class='press-kits-section'>
+    <section class='press-kits-section' first-sec="true">
         <h1 class='section-title'>Press kit</h1>
         <div class='press-kits-table'>
+            <?php
+            $games = new WP_Query([
+                'post_type'   => 'es_games',
+                'post_status' => 'publish'
+            ]);
+            ?>
             <?php if ($games->have_posts()) : ?>
                 <?php while ($games->have_posts()) : $games->the_post(); ?>
 
@@ -36,11 +36,7 @@ $games = new WP_Query([
                         </div>
 
                         <div class="press-kit-download-btn">
-                            <a
-                                class="prm-btn-white"
-                                href="<?= CFS()->get('archive-file'); ?>"
-                                target="_blank"
-                            >
+                            <a class="prm-btn-white" href="<?= CFS()->get('archive-file'); ?>" target="_blank">
                                 Download
                             </a>
                         </div>

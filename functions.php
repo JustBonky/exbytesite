@@ -1,7 +1,5 @@
 <?php
 
-
-
 add_action('init', function () {
 
 	register_post_type(
@@ -27,31 +25,35 @@ add_action('init', function () {
 		]
 	);
 
+	/**
+	 * Кастом тип поста для игры
+	 */
 	register_post_type(
-		'es_games', // length no more 20 !!!
+		'es_games',
 		[
 			'labels' => [
 				'name' => 'Игры',
 				'add_new' => 'Добавить новую',
-				'add_new_item' => 'Добавить новую игру',
+				'add_new_item' => 'Добавить новую игру'
 			],
 			'public' => true,
 			'menu_position' => 5,
 			'menu_icon' => 'dashicons-buddicons-activity',
 			'supports' => [
-				'title',
-				// 'excerpt',
-				// 'custom-fields'
+				'title'
 			],
 			'rewrite' => [
-				'slug' => 'games',
+				'slug' => 'games'
 			],
 			'has_archive' => true,
-			'taxonomies'  => array('category'),
+			'taxonomies'  => array('category')
 		]
 	);
 
 
+	/**
+	 * Создание блока соц. сетей
+	 */
 	register_post_type(
 		'es_find-us-blocks', // length no more 20 !!!
 		[
@@ -73,22 +75,22 @@ add_action('init', function () {
 });
 
 
-add_action(
-	'template_redirect',
-	function () {
-		if (
-			is_singular('es_press-kits') ||
-			is_singular('attachment')
-		) {
-			global $wp_query;
-			$wp_query->posts = [];
-			$wp_query->post = null;
-			$wp_query->set_404();
-			status_header(404);
-			nocache_headers();
+/**
+ * Редирект на родительский пост вложения
+ * или редирект на главную страницу
+ */
+add_action('template_redirect', function () {
+	if (is_attachment()) {
+		global $post;
+		if ($post && $post->post_parent) {
+			wp_redirect(esc_url(get_permalink($post->post_parent)), 301);
+			exit;
+		} else {
+			wp_redirect(esc_url(home_url('/')), 301);
+			exit;
 		}
 	}
-);
+});
 
 /**
  * exbyte-theme functions and definitions

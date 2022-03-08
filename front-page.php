@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <main class="body-content container" id="body-content" role="main">
-    <section class="intro-section">
+    <section class="intro-section" first-sec="true">
         <div class="intro-section_block intro-section_block--left">
             <h1>
                 <div class="stroke-item"><span>We Create</span>
@@ -21,11 +21,16 @@ get_header();
                     <div></div>
                 </div>
             </h1>
-            <h2>Exbyte Studios is a studio for the development of computer games and game solutions. Exbyte Studios
-                has gathered around him people who want to develop games and move forward!</h2><a class="prm-btn" href="#"><span>Steam Page</span><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewbox="0 0 24 24" width="24px" fill="#000">
+            <h2>
+                Exbyte Studios is a studio for the development of computer games and game solutions. Exbyte Studios has gathered around him people who want to develop games and move forward!
+            </h2>
+            <a class="prm-btn" href="#">
+                <span>Steam Page</span>
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewbox="0 0 24 24" width="24px" fill="#000">
                     <rect fill="none" height="24" width="24"></rect>
                     <path d="M9,5v2h6.59L4,18.59L5.41,20L17,8.41V15h2V5H9z"></path>
-                </svg></a>
+                </svg>
+            </a>
         </div>
         <div class="intro-section_block intro-section_block--right">
             <div class="intro-top-left-arrow"><svg width="157" height="119" viewbox="0 0 157 119" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -36,6 +36,10 @@
                 & .game-title {
                     text-align: center;
                     z-index: 10;
+
+                    & br {
+                        display: none;
+                    }
                 }
 
                 & .game-image {
@@ -63,7 +67,7 @@
                     width: 12px;
                     height: 12px;
                     border-radius: 30px;
-                    background-color: #000;
+                    background-color: $black;
                     transition: 300ms ease;
                     cursor: pointer;
 

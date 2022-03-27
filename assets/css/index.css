@@ -1,1 +1,633 @@
-*,*::before,*::after{margin:0;padding:0;outline:none;box-sizing:border-box;border:none;box-shadow:none}ul,ol{list-style:none}a:link,a:visited{text-decoration:none;color:inherit}img{display:block;max-width:100%}@font-face{font-family:"Nunito Regular";src:url("../fonts/Nunito/Nunito-Regular.ttf");font-weight:"400";font-style:"normal";font-display:swap}@font-face{font-family:"NunitoSans Bold";src:url("../fonts/Nunito Sans/NunitoSans-Bold.ttf");font-weight:700;font-style:"normal";font-display:swap}@font-face{font-family:"NunitoSans Regular";src:url("../fonts/Nunito Sans/NunitoSans-Regular.ttf");font-weight:"400";font-style:"normal";font-display:swap}body{color:#fff;min-width:320px;min-height:100vh;font-size:20px;overflow-x:hidden;background-color:#19191b;font-family:"Nunito Regular",sans-serif;position:relative;line-height:1.5;display:flex;flex-direction:column}main{flex-grow:1;width:100%;margin-top:100px !important}main>section{margin-top:200px}main>section[first-sec=true]{margin-top:0;min-height:calc(100vh - 100px)}.section-title{font-size:55px;color:#fff;padding-left:40px;font-family:"NunitoSans Bold",sans-serif;letter-spacing:.05em}.container{display:block;max-width:1230px;margin:0 auto;height:inherit;padding:0 15px;position:relative}.prm-btn{padding:5px 20px;border:1px solid #fff;border-radius:5px}.prm-btn-white{padding:10px 40px;border-radius:5px;background:#fff;color:#000 !important;font-weight:bold;font-family:"NunitoSans Bold",sans-serif}.df{display:flex}#canvas-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("../bg.png");background-position:center;background-repeat:no-repeat;background-size:cover;z-index:-2}.bg-img{position:absolute;top:0;left:0;width:100vw;height:100vh}.bg-img img,.bg-img video{display:block;width:100%;height:100%;object-fit:cover}.body_header{width:100%;height:100px;position:fixed;top:0;left:0;z-index:50;backdrop-filter:blur(10px)}.body_header-container{display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;z-index:5}.body_header_logo{max-width:220px;max-height:50px}.body_header_logo img{object-fit:cover;max-height:inherit}.body_header #menu-main-menu{display:flex;justify-content:center}.body_header #menu-main-menu li{position:relative}.body_header #menu-main-menu>li+li{margin-left:60px}.body_header_account .login-btn{display:flex;align-items:center;flex-flow:row nowrap}.body_header_account .login-btn svg{margin-left:10px}.body-footer{margin-top:50px;padding:2em 0;font-family:"NunitoSans Regular",sans-serif}.body-footer .logo{transform:scale(0.8)}.body-footer-container{display:flex;align-items:center;justify-content:space-between;max-width:1400px}.body-footer .menu ul{display:flex;color:rgba(255,255,255,.7)}.body-footer .menu ul>li+li{margin-left:50px}@media(max-width: 1200px){.body-footer .menu ul>li+li{margin-left:20px}}.body-footer .rights{color:rgba(255,255,255,.7)}.not-found-container{display:flex}.not-found-section{margin-top:0;margin:auto}.intro-section{min-height:calc(100vh - 100px);display:flex;align-items:center;margin-top:0}.intro-section_block{width:50%;height:100%}.intro-section_block--left{display:flex;flex-direction:column}.intro-section_block--left h1{font-family:"NunitoSans Bold",sans-serif;font-size:60px;letter-spacing:.05em;line-height:.5;margin-bottom:3vh}.intro-section_block--left h1 .stroke-item+.stroke-item{margin-top:10px}.intro-section_block--left h1 .stroke-item{display:inline-block;position:relative;overflow:hidden}.intro-section_block--left h1 .stroke-item div{position:absolute;display:inline-block;top:0;left:0;width:0;height:100%;background:#fff;z-index:1}.intro-section_block--left h1 .stroke-item span{line-height:1.2;display:inline-block}.intro-section_block--left h1 .stroke-item span+span{margin-top:10px}.intro-section_block--left h2{font-size:18px;color:rgba(255,255,255,.7);font-weight:300;max-width:72%;line-height:1.6;margin-bottom:3vh}.intro-section_block--left a{color:#19191b;background:#fff;align-self:flex-start;font-weight:bold;display:flex;align-items:center;padding-left:12px;padding-right:12px;font-size:17px}.intro-section_block--left a span{font-family:"NunitoSans Bold",sans-serif}.intro-section_block--left a svg{margin-left:8px}.intro-section_block--right{position:relative;min-height:250px;max-height:250px;border:1px solid red;border-radius:100px}.intro-section_block--right>div{transition:200ms ease}.intro-section_block--right .intro-top-left-arrow{position:absolute;top:-150px;left:-100px;transform:scale(0.6);transform-origin:left bottom}.intro-section_block--right .intro-top-left-arrow path{stroke-dasharray:0,300}.intro-section_block--right .intro-bottom-left-controllers{position:absolute;bottom:-70px;left:100px}.intro-section_block--right .intro-bottom-left-controllers svg{position:absolute;opacity:0}.intro-section_block--right .intro-bottom-left-controllers svg:nth-child(1){top:40px;left:0px}.intro-section_block--right .intro-bottom-left-controllers svg:nth-child(2){top:-50px;left:-50px}.our-games-section{margin-top:100px;display:flex;flex-direction:column}.our-games-section .games-preview{margin-top:100px;min-height:400px}.our-games-section .games-preview .games-carousel{margin:0 auto;max-width:1000px;display:flex;justify-content:space-between;position:relative;min-height:inherit}.our-games-section .games-preview .games-carousel .owl-stage{height:100%}.our-games-section .games-preview .games-carousel .owl-item{height:100%}.our-games-section .games-preview .games-carousel .slider-el{min-height:100%;color:#000;background-color:#ccc;border-radius:40px;text-align:center;overflow:hidden;height:100%;max-height:500px}.our-games-section .games-preview .games-carousel .slider-el .game-title{text-align:center;z-index:10}.our-games-section .games-preview .games-carousel .slider-el .game-title br{display:none}.our-games-section .games-preview .games-carousel .slider-el .game-image{height:100%}.our-games-section .games-preview .games-carousel .slider-el .game-image img{object-fit:cover;width:100%;height:100%}.our-games-section .games-preview .games-carousel>.owl-dots{position:absolute;bottom:-70px;left:50%;transform:translateX(-50%);display:flex}.our-games-section .games-preview .games-carousel>.owl-dots .owl-dot{display:block;margin:0 10px;width:12px;height:12px;border-radius:30px;background-color:#19191b;transition:300ms ease;cursor:pointer}.our-games-section .games-preview .games-carousel>.owl-dots .owl-dot span{display:none}.our-games-section .games-preview .games-carousel>.owl-dots .owl-dot.active{width:25px;background-color:#fff}.find-us-section{margin-top:200px;display:flex;flex-direction:column;align-items:center}.find-us-section .find-us-title{padding-left:0}.find-us-section_links{margin-top:60px;display:flex;align-items:center}.find-us-section_links>div+div{margin-left:80px}.find-us-section_links .find-twitter{transform:scale(0.75)}.news-section{display:flex;flex-direction:column}.news-section .news_preview{margin-top:100px;min-height:300px}.news-section .news_preview .news_slider{margin:0 auto;max-width:1200px;display:flex;position:relative;min-height:inherit}.news-section .news_preview .news_slider .owl-stage{height:100%}.news-section .news_preview .news_slider .owl-item{display:flex;justify-content:center;align-items:center;height:100%;color:#fff;background-color:#000;border-radius:10px}.news-section .news_preview .news_slider>.owl-dots{position:absolute;bottom:-70px;left:50%;transform:translateX(-50%);display:flex}.news-section .news_preview .news_slider>.owl-dots .owl-dot{display:block;margin:0 10px;width:12px;height:12px;border-radius:30px;background-color:#000;transition:300ms ease;cursor:pointer}.news-section .news_preview .news_slider>.owl-dots .owl-dot span{display:none}.news-section .news_preview .news_slider>.owl-dots .owl-dot.active{width:25px;background-color:#fff}.conclusion-section{display:flex;justify-content:space-between;align-items:center;padding:7em 0;position:relative}.conclusion-section::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:100vw;height:100%;background:#000;z-index:-1}.conclusion-section .conclusion-title{padding-left:0}.conclusion-section_slider{min-width:300px;border:1px solid red}.press-kits-section{margin-top:30px}.press-kits-section .press-kits-table{margin-top:40px;display:flex;flex-flow:row wrap;justify-content:center}.press-kits-section .press-kits-table .press-kit-item{width:100%;max-width:300px;margin:0 40px;display:flex;flex-direction:column;align-items:center;justify-content:space-between}.press-kits-section .press-kits-table .press-kit-item .press-kit-title{font-family:"NunitoSans Regular",sans-serif;font-size:25px;text-align:center}.press-kits-section .press-kits-table .press-kit-item .press-kit-title br{display:none}.press-kits-section .press-kits-table .press-kit-item .press-kit-image{width:100%;margin-top:20px;height:350px;border-radius:30px;overflow:hidden}.press-kits-section .press-kits-table .press-kit-item .press-kit-image img{width:100%;height:100%;object-fit:cover}.press-kits-section .press-kits-table .press-kit-item .press-kit-download-btn{margin-top:40px}.single-es_games #menu-main-menu a{color:#000}.single-es_games .intro-section .game-intro_block{height:100%;width:50%}.single-es_games .intro-section .game-intro_block:nth-child(1){flex-direction:column;align-items:flex-start;justify-content:center}.single-es_games .intro-section .game-intro_block:nth-child(2){display:flex;justify-content:center}.single-es_games .intro-section .game-title{font-size:80px;font-family:"NunitoSans Bold",sans-serif;line-height:1.2}.single-es_games .intro-section .game-description{margin-top:40px;opacity:.7;line-height:1.9;font-size:21px}.single-es_games .intro-section .intro-game-links-wrapper{margin-top:40px;display:flex;align-items:center}.single-es_games .intro-section .intro-game-links-wrapper span{font-size:16px;font-family:"NunitoSans Bold",sans-serif;letter-spacing:.1em;opacity:.8;line-height:100%}.single-es_games .intro-section .intro-game-links-wrapper .intro-game-links{display:flex;align-items:center;margin-left:30px}.single-es_games .intro-section .intro-game-links-wrapper .intro-game-links .intro-game-link{box-shadow:0 0 40px 0 rgba(255,255,255,.5);background-color:rgba(255,255,255,.15);border-radius:100px}.single-es_games .intro-section .intro-game-links-wrapper .intro-game-links .intro-game-link img{object-fit:contain;max-width:40px;max-height:40px}/*# sourceMappingURL=index.css.map */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Nunito Regular";
+  src: url("../fonts/Nunito/Nunito-Regular.ttf");
+  font-weight: "400";
+  font-style: "normal";
+  font-display: swap;
+}
+@font-face {
+  font-family: "NunitoSans Bold";
+  src: url("../fonts/Nunito Sans/NunitoSans-Bold.ttf");
+  font-weight: 700;
+  font-style: "normal";
+  font-display: swap;
+}
+@font-face {
+  font-family: "NunitoSans Regular";
+  src: url("../fonts/Nunito Sans/NunitoSans-Regular.ttf");
+  font-weight: "400";
+  font-style: "normal";
+  font-display: swap;
+}
+body {
+  color: #ffffff;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 20px;
+  overflow-x: hidden;
+  background-color: #000;
+  font-family: "Nunito Regular", sans-serif;
+  position: relative;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 100px !important;
+}
+main > section {
+  margin-top: 200px;
+}
+main > section[first-sec=true] {
+  margin-top: 0;
+  min-height: calc(100vh - 100px);
+}
+
+.section-title {
+  font-size: 55px;
+  color: #ffffff;
+  padding-left: 40px;
+  font-family: "NunitoSans Bold", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.container {
+  display: block;
+  max-width: 1230px;
+  margin: 0 auto;
+  height: inherit;
+  padding: 0 15px;
+  position: relative;
+}
+
+.prm-btn {
+  padding: 5px 20px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.prm-btn-white {
+  padding: 10px 40px;
+  border-radius: 5px;
+  background: #fff;
+  color: #000 !important;
+  font-weight: bold;
+  font-family: "NunitoSans Bold", sans-serif;
+}
+
+.df {
+  display: flex;
+}
+
+#main-bg-canvas-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(300px);
+  opacity: 0.4;
+  z-index: -2;
+}
+#main-bg-canvas-wrapper canvas {
+  width: inherit;
+  height: inherit;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.bg-img img, .bg-img video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cookie-block {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  border-radius: 20px;
+  padding: 20px 30px;
+  background: #19191b;
+  display: flex;
+  align-items: center;
+  max-width: 40%;
+  opacity: 1;
+  transition: 240ms ease 25ms;
+}
+.cookie-block.cookie-hiding {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.9);
+}
+.cookie-block_text {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 18px;
+  font-family: "NunitoSans Bold";
+}
+.cookie-block > button {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.body_header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+}
+.body_header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+.body_header_logo {
+  max-width: 220px;
+  max-height: 50px;
+}
+.body_header_logo img {
+  object-fit: cover;
+  max-height: inherit;
+}
+.body_header #menu-main-menu {
+  display: flex;
+  justify-content: center;
+}
+.body_header #menu-main-menu li {
+  position: relative;
+}
+.body_header #menu-main-menu > li + li {
+  margin-left: 60px;
+}
+.body_header_account .login-btn {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.body_header_account .login-btn svg {
+  margin-left: 10px;
+}
+
+.body-footer {
+  margin-top: 50px;
+  padding: 2em 0;
+  font-family: "NunitoSans Regular", sans-serif;
+}
+.body-footer .logo {
+  transform: scale(0.8);
+}
+.body-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+}
+.body-footer .menu ul {
+  display: flex;
+  color: rgba(255, 255, 255, 0.7);
+}
+.body-footer .menu ul > li + li {
+  margin-left: 50px;
+}
+@media (max-width: 1200px) {
+  .body-footer .menu ul > li + li {
+    margin-left: 20px;
+  }
+}
+.body-footer .rights {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.not-found-container {
+  display: flex;
+}
+
+.not-found-section {
+  margin-top: 0;
+  margin: auto;
+}
+
+.intro-section {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+.intro-section_block {
+  width: 50%;
+  height: 100%;
+}
+.intro-section_block--left {
+  display: flex;
+  flex-direction: column;
+}
+.intro-section_block--left h1 {
+  font-family: "NunitoSans Bold", sans-serif;
+  font-size: 60px;
+  letter-spacing: 0.05em;
+  line-height: 0.5;
+  margin-bottom: 3vh;
+}
+.intro-section_block--left h1 .stroke-item + .stroke-item {
+  margin-top: 10px;
+}
+.intro-section_block--left h1 .stroke-item {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.intro-section_block--left h1 .stroke-item div {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  z-index: 1;
+}
+.intro-section_block--left h1 .stroke-item span {
+  line-height: 1.2;
+  display: inline-block;
+}
+.intro-section_block--left h1 .stroke-item span + span {
+  margin-top: 10px;
+}
+.intro-section_block--left h2 {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  max-width: 72%;
+  line-height: 1.6;
+  margin-bottom: 3vh;
+}
+.intro-section_block--left a {
+  color: #19191b;
+  background: #fff;
+  align-self: flex-start;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 17px;
+}
+.intro-section_block--left a span {
+  font-family: "NunitoSans Bold", sans-serif;
+}
+.intro-section_block--left a svg {
+  margin-left: 8px;
+}
+.intro-section_block--right {
+  position: relative;
+  min-height: 250px;
+  max-height: 250px;
+  border: 1px solid red;
+  border-radius: 100px;
+}
+.intro-section_block--right > div {
+  transition: 200ms ease;
+}
+.intro-section_block--right .intro-top-left-arrow {
+  position: absolute;
+  top: -150px;
+  left: -100px;
+  transform: scale(0.6);
+  transform-origin: left bottom;
+}
+.intro-section_block--right .intro-top-left-arrow path {
+  stroke-dasharray: 0, 300;
+}
+.intro-section_block--right .intro-bottom-left-controllers {
+  position: absolute;
+  bottom: -70px;
+  left: 100px;
+}
+.intro-section_block--right .intro-bottom-left-controllers svg {
+  position: absolute;
+  opacity: 0;
+}
+.intro-section_block--right .intro-bottom-left-controllers svg:nth-child(1) {
+  top: 40px;
+  left: 0px;
+}
+.intro-section_block--right .intro-bottom-left-controllers svg:nth-child(2) {
+  top: -50px;
+  left: -50px;
+}
+
+.our-games-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.our-games-section .games-preview {
+  margin-top: 100px;
+  min-height: 400px;
+}
+.our-games-section .games-preview .games-carousel {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  min-height: inherit;
+}
+.our-games-section .games-preview .games-carousel .owl-stage {
+  height: 100%;
+}
+.our-games-section .games-preview .games-carousel .owl-item {
+  height: 100%;
+}
+.our-games-section .games-preview .games-carousel .slider-el {
+  min-height: 100%;
+  color: #000;
+  background-color: #ccc;
+  border-radius: 40px;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  max-height: 500px;
+}
+.our-games-section .games-preview .games-carousel .slider-el .game-title {
+  text-align: center;
+  z-index: 10;
+}
+.our-games-section .games-preview .games-carousel .slider-el .game-title br {
+  display: none;
+}
+.our-games-section .games-preview .games-carousel .slider-el .game-image {
+  height: 100%;
+}
+.our-games-section .games-preview .games-carousel .slider-el .game-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.our-games-section .games-preview .games-carousel > .owl-dots {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.our-games-section .games-preview .games-carousel > .owl-dots .owl-dot {
+  display: block;
+  margin: 0 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 30px;
+  background-color: #19191b;
+  transition: 300ms ease;
+  cursor: pointer;
+}
+.our-games-section .games-preview .games-carousel > .owl-dots .owl-dot span {
+  display: none;
+}
+.our-games-section .games-preview .games-carousel > .owl-dots .owl-dot.active {
+  width: 25px;
+  background-color: #fff;
+}
+
+.find-us-section {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.find-us-section .find-us-title {
+  padding-left: 0;
+}
+.find-us-section_links {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 40px;
+}
+.find-us-section_links .social-link-item:nth-child(1) {
+  transform: scale(0.75);
+}
+.find-us-section_links .social-link-item + .social-link-item {
+  margin-left: 100px;
+}
+
+.news-section {
+  display: flex;
+  flex-direction: column;
+}
+.news-section .news_preview {
+  margin-top: 100px;
+  min-height: 300px;
+}
+.news-section .news_preview .news_slider {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  position: relative;
+  min-height: inherit;
+}
+.news-section .news_preview .news_slider .owl-stage {
+  height: 100%;
+}
+.news-section .news_preview .news_slider .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  background-color: #000;
+  border-radius: 10px;
+}
+.news-section .news_preview .news_slider > .owl-dots {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.news-section .news_preview .news_slider > .owl-dots .owl-dot {
+  display: block;
+  margin: 0 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 30px;
+  background-color: #000;
+  transition: 300ms ease;
+  cursor: pointer;
+}
+.news-section .news_preview .news_slider > .owl-dots .owl-dot span {
+  display: none;
+}
+.news-section .news_preview .news_slider > .owl-dots .owl-dot.active {
+  width: 25px;
+  background-color: #fff;
+}
+
+.conclusion-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7em 0;
+  position: relative;
+}
+.conclusion-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+}
+.conclusion-section .conclusion-title {
+  padding-left: 0;
+}
+.conclusion-section_slider {
+  min-width: 300px;
+  border: 1px solid red;
+}
+
+.press-kits-section {
+  margin-top: 30px;
+}
+.press-kits-section .press-kits-table {
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.press-kits-section .press-kits-table .press-kit-item {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.press-kits-section .press-kits-table .press-kit-item .press-kit-title {
+  font-family: "NunitoSans Regular", sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+.press-kits-section .press-kits-table .press-kit-item .press-kit-title br {
+  display: none;
+}
+.press-kits-section .press-kits-table .press-kit-item .press-kit-image {
+  width: 100%;
+  margin-top: 20px;
+  height: 350px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.press-kits-section .press-kits-table .press-kit-item .press-kit-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.press-kits-section .press-kits-table .press-kit-item .press-kit-download-btn {
+  margin-top: 40px;
+}
+
+.single-es_games #menu-main-menu a {
+  color: #000;
+}
+.single-es_games .intro-section .game-intro_block {
+  height: 100%;
+  width: 50%;
+}
+.single-es_games .intro-section .game-intro_block:nth-child(1) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.single-es_games .intro-section .game-intro_block:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.single-es_games .intro-section .game-title {
+  font-size: 80px;
+  font-family: "NunitoSans Bold", sans-serif;
+  line-height: 1.2;
+}
+.single-es_games .intro-section .game-description {
+  margin-top: 40px;
+  opacity: 0.7;
+  line-height: 1.9;
+  font-size: 21px;
+}
+.single-es_games .intro-section .intro-game-links-wrapper {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+.single-es_games .intro-section .intro-game-links-wrapper span {
+  font-size: 16px;
+  font-family: "NunitoSans Bold", sans-serif;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  line-height: 100%;
+}
+.single-es_games .intro-section .intro-game-links-wrapper .intro-game-links {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.single-es_games .intro-section .intro-game-links-wrapper .intro-game-links .intro-game-link {
+  box-shadow: 0 0 40px 0 rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+}
+.single-es_games .intro-section .intro-game-links-wrapper .intro-game-links .intro-game-link img {
+  object-fit: contain;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+/*# sourceMappingURL=index.css.map */

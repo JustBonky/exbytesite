@@ -1,16 +1,3 @@
-<?php
-
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package exbyte-theme
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
@@ -24,8 +11,8 @@
 
 <body <?php body_class(); ?>>
 
-	<div id='canvas-bg'>
-		<canvas></canvas>
+	<div id='main-bg-canvas-wrapper'>
+		<canvas id="main-bg-canvas"></canvas>
 	</div>
 
 	<header class="body_header">

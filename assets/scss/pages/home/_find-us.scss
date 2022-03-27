@@ -12,13 +12,16 @@
         margin-top: 60px;
         display: flex;
         align-items: center;
+        position: relative;
+        left: 40px;
 
-        & > div + div {
-            margin-left: 80px;
+        & .social-link-item:nth-child(1) {
+            transform: scale(0.75);
         }
 
-        & .find-twitter {
-            transform: scale(0.75);
+        & .social-link-item + .social-link-item {
+            margin-left: 100px;
+
         }
     }
 }

@@ -1,22 +1,25 @@
 <?php
-get_header();
+get_header('single-game', [
+        'color' => CFS()->get('menu_links_colors') ?? '#000'
+]);
 
 function endsWith(string $string, string $end): bool
 {
-    return ($offset = strlen($string) - strlen($end)) >= 0
-        && strpos($string, $end, $offset) !== false;
+    return (($offset = strlen($string) - strlen($end)) >= 0) && strpos($string, $end, $offset) !== false;
 }
-
 ?>
 
 
 <div class="bg-img">
-    <?php if (endsWith(CFS()->get('game-background'), '.mp4')) : ?>
-        <video autoplay="true" muted="true" loop="true" id="bgvid">
-            <source src="<?= CFS()->get('game-background'); ?>" type="video/mp4">
-        </video>
-    <?php else : ?>
-        <img src="<?= CFS()->get('game-background'); ?>" alt="game-background">
+    <!-- Проверка на наличие фона -->
+    <?php if (CFS()->get('game-background')) : ?>
+        <?php if (endsWith(CFS()->get('game-background'), '.mp4')) : ?>
+            <video autoplay="true" muted="true" loop="true" id="bgvid">
+                <source src="<?= CFS()->get('game-background'); ?>" type="video/mp4">
+            </video>
+        <?php else : ?>
+            <img src="<?= CFS()->get('game-background'); ?>" alt="game-background">
+        <?php endif; ?>
     <?php endif; ?>
 </div>
 
@@ -56,6 +59,7 @@ function endsWith(string $string, string $end): bool
                     align-items: center;
                     padding: 10px 25px;
                 }
+
                 .game-intro_block:nth-child(2) .cfs-hyperlink svg {
                     margin-left: 10px;
                     margin-bottom: 3px;

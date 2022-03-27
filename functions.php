@@ -2,76 +2,75 @@
 
 add_action('init', function () {
 
-	register_post_type(
-		'es_news',
-		[
-			'labels' => [
-				'name' => 'Новости',
-				'add_new' => 'Добавить новость'
-			],
-			'public' => true, // !!!
-			'menu_position' => 4,
-			'menu_icon' => 'dashicons-format-gallery',
-			'supports' => [
-				'title',
-				'editor',
-				'thumbnail',
-				'excerpt'
-			],
-			'rewrite' => [
-				'slug' => 'news',
-			],
-			'has_archive' => true
-		]
-	);
+    register_post_type(
+        'es_news',
+        [
+            'labels' => [
+                'name' => 'Новости',
+                'add_new' => 'Добавить новость'
+            ],
+            'public' => true, // !!!
+            'menu_position' => 4,
+            'menu_icon' => 'dashicons-format-gallery',
+            'supports' => [
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt'
+            ],
+            'rewrite' => [
+                'slug' => 'news',
+            ],
+            'has_archive' => true
+        ]
+    );
 
-	/**
-	 * Кастом тип поста для игры
-	 */
-	register_post_type(
-		'es_games',
-		[
-			'labels' => [
-				'name' => 'Игры',
-				'add_new' => 'Добавить новую',
-				'add_new_item' => 'Добавить новую игру'
-			],
-			'public' => true,
-			'menu_position' => 5,
-			'menu_icon' => 'dashicons-buddicons-activity',
-			'supports' => [
-				'title'
-			],
-			'rewrite' => [
-				'slug' => 'games'
-			],
-			'has_archive' => true,
-			'taxonomies'  => array('category')
-		]
-	);
+    /**
+     * Кастом тип поста для игры
+     */
+    register_post_type(
+        'es_games',
+        [
+            'labels' => [
+                'name' => 'Игры',
+                'add_new' => 'Добавить новую',
+                'add_new_item' => 'Добавить новую игру'
+            ],
+            'public' => true,
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-buddicons-activity',
+            'supports' => [
+                'title'
+            ],
+            'rewrite' => [
+                'slug' => 'games'
+            ],
+            'has_archive' => true,
+            'taxonomies' => array('category')
+        ]
+    );
 
 
-	/**
-	 * Создание блока соц. сетей
-	 */
-	register_post_type(
-		'es_find-us-blocks', // length no more 20 !!!
-		[
-			'labels' => [
-				'name' => 'Соц. сети',
-				'add_new' => 'Добавить новую',
-				'add_new_item' => 'Добавить новую соц. сеть',
-			],
-			'public' => true,
-			'menu_position' => 6,
-			'menu_icon' => 'dashicons-twitter',
-			'supports' => [
-				'title',
-				'thumbnail',
-				'custom-fields'
-			]
-		]
-	);
+    /**
+     * Создание блока соц. сетей
+     */
+    register_post_type(
+        'es_socials', // length no more 20 !!!
+        [
+            'labels' => [
+                'name' => 'Соц. сети',
+                'add_new' => 'Добавить новую',
+                'add_new_item' => 'Добавить новую соц. сеть',
+            ],
+            'public' => true,
+            'menu_position' => 6,
+            'menu_icon' => 'dashicons-twitter',
+            'supports' => [
+                'title',
+                'custom-fields'
+            ]
+        ]
+    );
 });
 
 
@@ -80,16 +79,16 @@ add_action('init', function () {
  * или редирект на главную страницу
  */
 add_action('template_redirect', function () {
-	if (is_attachment()) {
-		global $post;
-		if ($post && $post->post_parent) {
-			wp_redirect(esc_url(get_permalink($post->post_parent)), 301);
-			exit;
-		} else {
-			wp_redirect(esc_url(home_url('/')), 301);
-			exit;
-		}
-	}
+    if (is_attachment()) {
+        global $post;
+        if ($post && $post->post_parent) {
+            wp_redirect(esc_url(get_permalink($post->post_parent)), 301);
+            exit;
+        } else {
+            wp_redirect(esc_url(home_url('/')), 301);
+            exit;
+        }
+    }
 });
 
 /**
@@ -101,8 +100,8 @@ add_action('template_redirect', function () {
  */
 
 if (!defined('_S_VERSION')) {
-	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.0');
+    // Replace the version number of the theme on each release.
+    define('_S_VERSION', '1.0.0');
 }
 
 /**
@@ -114,87 +113,88 @@ if (!defined('_S_VERSION')) {
  */
 function exbyte_theme_setup()
 {
-	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on exbyte-theme, use a find and replace
-		* to change 'exbyte-theme' to the name of your theme in all the template files.
-		*/
-	load_theme_textdomain('exbyte-theme', get_template_directory() . '/languages');
+    /*
+        * Make theme available for translation.
+        * Translations can be filed in the /languages/ directory.
+        * If you're building a theme based on exbyte-theme, use a find and replace
+        * to change 'exbyte-theme' to the name of your theme in all the template files.
+        */
+    load_theme_textdomain('exbyte-theme', get_template_directory() . '/languages');
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support('automatic-feed-links');
+    // Add default posts and comments RSS feed links to head.
+    add_theme_support('automatic-feed-links');
 
-	/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
-		*/
-	add_theme_support('title-tag');
+    /*
+        * Let WordPress manage the document title.
+        * By adding theme support, we declare that this theme does not use a
+        * hard-coded <title> tag in the document head, and expect WordPress to
+        * provide it for us.
+        */
+    add_theme_support('title-tag');
 
-	/*
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
-	add_theme_support('post-thumbnails');
+    /*
+        * Enable support for Post Thumbnails on posts and pages.
+        *
+        * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+        */
+    add_theme_support('post-thumbnails');
 
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'main-menu' => esc_html__('Primary', 'exbyte-theme'),
-		)
-	);
+    // This theme uses wp_nav_menu() in one location.
+    register_nav_menus(
+        array(
+            'main-menu' => esc_html__('Primary', 'exbyte-theme'),
+        )
+    );
 
-	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
-	add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-			'style',
-			'script',
-		)
-	);
+    /*
+        * Switch default core markup for search form, comment form, and comments
+        * to output valid HTML5.
+        */
+    add_theme_support(
+        'html5',
+        array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'style',
+            'script',
+        )
+    );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'exbyte_theme_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
+    // Set up the WordPress core custom background feature.
+    add_theme_support(
+        'custom-background',
+        apply_filters(
+            'exbyte_theme_custom_background_args',
+            array(
+                'default-color' => 'ffffff',
+                'default-image' => '',
+            )
+        )
+    );
 
-	// Add theme support for selective refresh for widgets.
-	add_theme_support('customize-selective-refresh-widgets');
+    // Add theme support for selective refresh for widgets.
+    add_theme_support('customize-selective-refresh-widgets');
 
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		)
-	);
+    /**
+     * Add support for core custom logo.
+     *
+     * @link https://codex.wordpress.org/Theme_Logo
+     */
+    add_theme_support(
+        'custom-logo',
+        array(
+            'height' => 250,
+            'width' => 250,
+            'flex-width' => true,
+            'flex-height' => true,
+        )
+    );
 }
+
 add_action('after_setup_theme', 'exbyte_theme_setup');
 
 /**
@@ -206,8 +206,9 @@ add_action('after_setup_theme', 'exbyte_theme_setup');
  */
 function exbyte_theme_content_width()
 {
-	$GLOBALS['content_width'] = apply_filters('exbyte_theme_content_width', 640);
+    $GLOBALS['content_width'] = apply_filters('exbyte_theme_content_width', 640);
 }
+
 add_action('after_setup_theme', 'exbyte_theme_content_width', 0);
 
 /**
@@ -217,18 +218,19 @@ add_action('after_setup_theme', 'exbyte_theme_content_width', 0);
  */
 function exbyte_theme_widgets_init()
 {
-	register_sidebar(
-		array(
-			'name'          => esc_html__('Sidebar', 'exbyte-theme'),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__('Add widgets here.', 'exbyte-theme'),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
+    register_sidebar(
+        array(
+            'name' => esc_html__('Sidebar', 'exbyte-theme'),
+            'id' => 'sidebar-1',
+            'description' => esc_html__('Add widgets here.', 'exbyte-theme'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
+    );
 }
+
 add_action('widgets_init', 'exbyte_theme_widgets_init');
 
 /**
@@ -236,50 +238,67 @@ add_action('widgets_init', 'exbyte_theme_widgets_init');
  */
 function exbyte_theme_scripts()
 {
-	wp_enqueue_style('exbyte-theme-style', get_stylesheet_uri(), [], _S_VERSION);
+    wp_enqueue_style('exbyte-theme-style', get_stylesheet_uri(), [], _S_VERSION);
 
-	if (!is_admin()) {
-		wp_deregister_script('jquery');
-		wp_register_script(
-			'jquery',
-			get_template_directory_uri() . '/assets/js/libs/jquery.js',
-			false,
-			'3.6.0'
-		);
-		wp_enqueue_script('jquery');
-	}
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script(
+            'jquery',
+            get_template_directory_uri() . '/assets/js/libs/jquery.js',
+            false,
+            '3.6.0'
+        );
+        wp_enqueue_script('jquery');
+    }
 
-	wp_enqueue_script(
-		'es-owl-carousel',
-		get_template_directory_uri() . '/assets/js/libs/owl.carousel.min.js',
-		['jquery'],
-		_S_VERSION,
-		true
-	);
+    wp_enqueue_script(
+        'es-owl-carousel',
+        get_template_directory_uri() . '/assets/js/libs/owl.carousel.min.js',
+        ['jquery'],
+        _S_VERSION,
+        true
+    );
 
-	// wp_enqueue_script(
-	// 	'canvas-bg',
-	// 	get_template_directory_uri() . '/assets/js/canvas-bg.min.js',
-	// 	['jquery'],
-	// 	_S_VERSION,
-	// 	true
-	// );
+    wp_enqueue_script(
+        'cookies-js',
+        'https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js',
+        [],
+        _S_VERSION,
+        true
+    );
 
-	if (is_front_page()) {
-		wp_enqueue_script(
-			'es-carousels',
-			get_template_directory_uri() . '/assets/js/carousels.js',
-			['jquery', 'es-owl-carousel'],
-			_S_VERSION,
-			true
-		);
-	}
+    wp_enqueue_script(
+        'global-js',
+        get_template_directory_uri() . '/assets/js/global.js',
+        ['cookies-js', 'jquery'],
+        _S_VERSION,
+        true
+    );
+
+//	 wp_enqueue_script(
+//	 	'canvas-bg',
+//	 	get_template_directory_uri() . '/assets/js/main-canvas-bg.js',
+//	 	[],
+//	 	_S_VERSION,
+//	 	true
+//	 );
+
+    if (is_front_page()) {
+        wp_enqueue_script(
+            'es-carousels',
+            get_template_directory_uri() . '/assets/js/carousels.js',
+            ['jquery', 'es-owl-carousel'],
+            _S_VERSION,
+            true
+        );
+    }
 
 
-	wp_enqueue_style('exbyte-theme-index-css', get_template_directory_uri() . '/assets/css/index.css', [], _S_VERSION);
+    wp_enqueue_style('exbyte-theme-index-css', get_template_directory_uri() . '/assets/css/index.css', [], _S_VERSION);
 
-	wp_enqueue_style('es-owl-css', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', [], _S_VERSION);
+    wp_enqueue_style('es-owl-css', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', [], _S_VERSION);
 }
+
 add_action('wp_enqueue_scripts', 'exbyte_theme_scripts');
 
 /**
@@ -306,5 +325,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
-	require get_template_directory() . '/inc/jetpack.php';
+    require get_template_directory() . '/inc/jetpack.php';
+}
+
+
+add_action('admin_init', 'my_remove_admin_menus');
+function my_remove_admin_menus()
+{
+//    remove_menu_page('edit-comments.php');
+//    remove_menu_page('edit.php');
+//    remove_menu_page('users.php');
 }

@@ -1,0 +1,42 @@
+.blog-intro-section {
+    height: 300px;
+    margin-top: auto !important;
+    position: relative;
+
+    &-title {
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        & .intro-suptitle {
+            display: block;
+            font-size: 21px;
+            font-family: "NunitoSans Bold", sans-serif;
+        }
+
+        & .intro-title {
+            line-height: 1;
+            font-size: 50px;
+            font-family: "NunitoSans Bold", sans-serif;
+        }
+    }
+
+    &-background {
+        overflow-y: hidden;
+    }
+
+    &-background img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        min-width: 100vw;
+        transform: translateX(-50%);
+        height: 300px;
+        object-fit: cover;
+        object-position: center 70%;
+        // filter: blur(1px);
+    }
+}

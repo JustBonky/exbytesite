@@ -5,12 +5,13 @@ const introBgTl = gsap.timeline({
     }
 });
 
-introBgTl.to('.intro-top-left-arrow', {
-    scale: 0.85,
-    left: '+=15',
-    top: '-=15',
-    opacity: 1,
-}, 0)
+introBgTl
+    .to('.intro-top-left-arrow', {
+        scale: 0.85,
+        left: '+=15',
+        top: '-=15',
+        opacity: 1,
+    }, 0)
     .fromTo('.body_header_logo', {
         opacity: 0,
         y: -10
@@ -34,6 +35,13 @@ introBgTl.to('.intro-top-left-arrow', {
         opacity: 1,
         duration: 0.8,
     }, 1)
+    .fromTo('.intro-preview-img', {
+        opacity: 0,
+        bottom: 10,
+    }, {
+        opacity: 1,
+        bottom: 0        
+    }, 0.5)
 
 introBgTl.to('.intro-top-left-arrow path', {
     strokeDasharray: '300, 300'
@@ -57,6 +65,7 @@ introBgTl.to('.intro-bottom-left-controllers svg:nth-child(2)', 0.7, {
 introBgTl.to('.intro-bottom-right-cross', 0.7, {
     bottom: -100,
     right: 0,
+    bottom: 30,
     opacity: 1,
     rotation: 50,
     ease: Expo.easeInOut
@@ -104,7 +113,7 @@ sections.forEach((section) => {
                 trigger: section,
                 start: "top 80%",
                 end: "bottom bottom",
-                markers: true
+                // markers: true
             }
         })
         .from(title, {

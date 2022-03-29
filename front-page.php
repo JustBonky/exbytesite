@@ -1,7 +1,5 @@
 <?php
-
 get_header();
-
 ?>
 
 <main class="body-content container" id="body-content" role="main">
@@ -34,6 +32,7 @@ get_header();
             </a>
         </div>
         <div class="intro-section_block intro-section_block--right">
+            <?= wp_get_attachment_image(138, 'full', false, ['class' => 'intro-preview-img']); ?>
             <div class="intro-top-left-arrow">
                 <svg width="157" height="119" viewbox="0 0 157 119" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 117.5L29.5 73.5L46.5 99L82 47.5L103.5 92L154 1.5" stroke="white" stroke-width="5">

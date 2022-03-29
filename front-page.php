@@ -85,8 +85,8 @@ get_header();
 
         <section class="our-games-section" id="our-games-section">
             <h3 class="section-title our-games-title">Our games</h3>
-            <div class="games-preview">
-                <div class="games-carousel owl-carousel owl-theme">
+            <div class="games-slider">
+                <div class="owl-carousel games-carousel">
                     <?php
                     $games = new WP_Query([
                         'post_type' => 'es_games',
@@ -96,11 +96,8 @@ get_header();
                     <?php if ($games->have_posts()) : ?>
                         <?php while ($games->have_posts()) : $games->the_post(); ?>
 
-                            <div class="slider-el">
+                            <div class="game-slider-el">
                                 <a href="<?= get_post_permalink() ?>">
-                                    <div class="game-title">
-                                        <?= CFS()->get('game-name'); ?>
-                                    </div>
                                     <div class="game-image">
                                         <?= wp_get_attachment_image(CFS()->get('preview-image'), 'full'); ?>
                                     </div>

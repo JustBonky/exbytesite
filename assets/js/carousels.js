@@ -3,11 +3,10 @@ $(document).ready(function () {
         loop: true,
         margin: 100,
         items: 2,
-        animateOut: "animate__fadeOutDown",
-        animateIn: "animate__fadeInDown",
         smartSpeed: 500,
         dots: true,
         dotsEach: true,
+        nav: true,
         responsive: {
             0: {
                 margin: 40,
@@ -24,11 +23,10 @@ $(document).ready(function () {
     $(".news_slider").owlCarousel({
         loop: true,
         items: 3,
-        animateOut: "animate__fadeOutDown",
-        animateIn: "animate__fadeInDown",
         smartSpeed: 500,
         dots: true,
         dotsEach: true,
+        nav: true,
         responsive: {
             0: {
                 margin: 10,

@@ -18,9 +18,7 @@
 	<header class="body_header">
 		<div class="container body_header-container">
 			<div class="body_header_logo">
-
 				<?php the_custom_logo(); ?>
-
 			</div>
 
 			<?php wp_nav_menu(); ?>

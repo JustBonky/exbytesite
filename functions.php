@@ -268,20 +268,28 @@ function exbyte_theme_scripts()
     );
 
     wp_enqueue_script(
-        'global-js',
-        get_template_directory_uri() . '/assets/js/global.js',
-        ['cookies-js', 'jquery'],
+        'es-gsap',
+        get_template_directory_uri() . '/assets/js/libs/gsap.min.js',
+        [],
         _S_VERSION,
         true
     );
 
-//	 wp_enqueue_script(
-//	 	'canvas-bg',
-//	 	get_template_directory_uri() . '/assets/js/main-canvas-bg.js',
-//	 	[],
-//	 	_S_VERSION,
-//	 	true
-//	 );
+    wp_enqueue_script(
+        'global-js',
+        get_template_directory_uri() . '/assets/js/global.js',
+        ['cookies-js', 'jquery', 'es-gsap'],
+        _S_VERSION,
+        true
+    );
+
+	//  wp_enqueue_script(
+	//  	'canvas-bg',
+	//  	get_template_directory_uri() . '/assets/js/main-canvas-bg.js',
+	//  	[],
+	//  	_S_VERSION,
+	//  	true
+	//  );
 
     if (is_front_page()) {
         wp_enqueue_script(
@@ -294,9 +302,21 @@ function exbyte_theme_scripts()
     }
 
 
-    wp_enqueue_style('exbyte-theme-index-css', get_template_directory_uri() . '/assets/css/index.css', [], _S_VERSION);
+    wp_enqueue_style(
+        'exbyte-theme-index-css',
+        get_template_directory_uri() . '/assets/css/index.css',
+        [],
+        _S_VERSION
+    );
 
-    wp_enqueue_style('es-owl-css', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', [], _S_VERSION);
+    wp_enqueue_style(
+        'es-owl-css',
+        get_template_directory_uri() . '/assets/css/owl.carousel.min.css',
+        [],
+        _S_VERSION
+    );
+
+    // wp_enqueue_style('es-owl-theme-css', get_template_directory_uri() . 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css', [], _S_VERSION);
 }
 
 add_action('wp_enqueue_scripts', 'exbyte_theme_scripts');

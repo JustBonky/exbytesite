@@ -5,7 +5,6 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -20,6 +19,16 @@
 			<div class="body_header_logo">
 				<?php the_custom_logo(); ?>
 			</div>
+
+			<?php
+			if (CFS()->get('menu_links_colors') !== NULL) {
+				echo "<style>
+						.menu-main-menu-container ul li a {
+							color: " . CFS()->get('menu_links_colors') . " !important;
+						}
+					</style>";
+			};
+			?>
 
 			<?php wp_nav_menu(); ?>
 

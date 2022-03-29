@@ -2,20 +2,38 @@
 get_header();
 ?>
 
+<main class="body-content container" id="body-content" role="main">
 
-<?php
+    <section class='press-kits-section' first-sec="true">
+        <h1 class='section-title'><?= $pagename; ?></h1>
+        <div class='press-kits-table'>
+            <?php
+            $games = new WP_Query([
+                'post_type'   => 'es_games',
+                'post_status' => 'publish'
+            ]);
+            ?>
+            <?php if ($games->have_posts()) : ?>
+                <?php while ($games->have_posts()) : $games->the_post(); ?>
 
-$params = array(
-    'post_type'   => 'es_games',
-    'post_status' => 'publish'
-);
+                    <div class="press-kit-item">
 
-$news = new WP_Query($params);
+                        <div class="press-kit-title">
+                            <?= CFS()->get('game-name'); ?>
+                        </div>
 
-?>
+                        <div class="press-kit-image">
+                            <?= wp_get_attachment_image(CFS()->get('preview-image'), 'full'); ?>
+                        </div>
+                    </div>
 
-<main>
-    <h1>games</h1>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <h2>No press yet</h2>
+            <?php endif; ?>
+        </div>
+    </section>
+
 </main>
 
 <?php

@@ -1,7 +1,6 @@
 <?php
-get_header('single-game', [
-        'color' => CFS()->get('menu_links_colors') ?? '#000'
-]);
+
+get_header();
 
 function endsWith(string $string, string $end): bool
 {

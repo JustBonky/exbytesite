@@ -2,20 +2,42 @@ const introBgTl = gsap.timeline({
     defaults: {
         duration: 1.5,
         ease: Back.easeInOut
-    },
-    onComplete: test,
-})
-
+    }
+});
 
 introBgTl.to('.intro-top-left-arrow', {
-    scale: 1,
+    scale: 0.85,
     left: '+=15',
-    top: '-=15'
+    top: '-=15',
+    opacity: 1,
 }, 0)
+    .fromTo('.body_header_logo', {
+        opacity: 0,
+        y: -10
+    }, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8
+    }, 0)
+    .fromTo('#menu-main-menu li', {
+        opacity: 0,
+        y: -10
+    }, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.3,
+        duration: 0.5,
+    }, 0.5)
+    .fromTo('.body_header_account', {
+        opacity: 0,
+    }, {
+        opacity: 1,
+        duration: 0.8,
+    }, 1)
 
 introBgTl.to('.intro-top-left-arrow path', {
     strokeDasharray: '300, 300'
-}, 0)
+}, 0);
 
 
 introBgTl.to('.intro-bottom-left-controllers svg:nth-child(1)', {
@@ -32,8 +54,13 @@ introBgTl.to('.intro-bottom-left-controllers svg:nth-child(2)', 0.7, {
     ease: Expo.easeInOut
 }, 0)
 
-
-
+introBgTl.to('.intro-bottom-right-cross', 0.7, {
+    bottom: -100,
+    right: 0,
+    opacity: 1,
+    rotation: 50,
+    ease: Expo.easeInOut
+}, 0)
 
 const tlTitle = gsap.timeline({
     defaults: {
@@ -53,7 +80,7 @@ tlTitle.to('h1 .stroke-item div', {
     delay: 0.2
 })
 
-tlTitle.to('h1 .stroke-item span', 0.01, { opacity: 1 })
+tlTitle.to('h1 .stroke-item span', 0.01, { opacity: 1 });
 
 tlTitle.to('h1 .stroke-item div', {
     right: '0',
@@ -61,93 +88,31 @@ tlTitle.to('h1 .stroke-item div', {
     width: '0%',
     ease: Sine.easeOut,
     stagger: 0.1,
-})
-
-// gsap.from('h1', {
-//     scale: 1.1,
-//     duration: 1,
-// }, {
-//     scale: 1,
-//     ease: Back.easeOut,
-//     delay: 0.2,
-// })
+});
 
 
-// document.addEventListener("DOMContentLoaded", function () {
+gsap.registerPlugin();
 
-//     console.log('dom loaded')
+let sections = gsap.utils.toArray("section:not(.intro-section)");
 
-//     initParallax();
-//     document.addEventListener('mousemove', mouseParallax);
-//     // document.addEventListener('scroll', scrollParallax)
-// });
-
-function test() {
-    initParallax();
-    document.addEventListener('mousemove', mouseParallax);
-}
-
-var cursorX = window.innerWidth / 2; var cursorY = window.innerHeight / 2;
-var offsetX = window.innerWidth / 2; var offsetY = window.innerHeight / 2;
-var depthXY = 0;
-var scenes;
-var layers;
-
-// Initialize variables
-function initParallax() {
-    scenes = document.querySelectorAll('.intro-s_block--right');
-    layers = document.querySelectorAll('.intro-s_block--right div');
-}
-
-// Called on scroll
-function scrollParallax(event) {
-    // if (document.getElementById('sm').checked) {
-    sP(layers, 0.9);
-    // }
-}
-
-// Called on Mouse move
-function mouseParallax(event) {
-    mP(event);
-}
-
-//Mouse move Parallax 
-function mP(event) {
-    cursorX = event.clientX; // 960
-    cursorY = event.clientY;
-    for (i = 0; i < layers.length; i++) {
-        depthXY = 0.3;
-        offsetX = ((cursorX * depthXY) / 12);
-        offsetY = ((cursorY * depthXY) / 12);
-        layers[i].style.transform = 'translate3d(' + offsetX + 'px,' + offsetY + 'px,0px)';
-        // layers[i].style.left = offsetX + 'px'
-        // layers[i].style.top = offsetY + 'px'
-    }
-}
-
-//Scrolling Parallax
-function sP($object, multiplier) {
-    multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-    multiplier = 1 - multiplier;
-    var from_top = window.pageYOffset;
-    var bg_css = '0' + (multiplier * from_top) + 'px';
-    for (var index = 0; index < $object.length; index++) {
-        $object[index].style.marginTop = bg_css;
-    }
-};
-
-//IE Fallback
-if (typeof window.getComputedStyle(document.body).backgroundBlendMode == 'undefined') {
-    document.documentElement.className += " no-background-blend-mode";
-}
-
-// gsap.to('#our-games-section', {
-//     scrollTrigger: {
-//         trigger: '#our-games-section',
-//         markers: true,
-//         start: 'top top',
-//         bottom: 'bottom bottom',
-//     },
-//     opacity: 1,
-//     x: 400
-// });
+sections.forEach((section) => {
+    let title = section.querySelector(".section-title");
+    let text = section.querySelector(".anim-sec-body");
+    gsap
+        .timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                end: "bottom bottom",
+                markers: true
+            }
+        })
+        .from(title, {
+            opacity: 0,
+            x: 30
+        })
+        .from(text, {
+            opacity: 0,
+            x: -15
+        })
+});

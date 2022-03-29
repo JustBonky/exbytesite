@@ -44,7 +44,7 @@
                     & span {
                         line-height: 1.2;
                         display: inline-block;
-                        // opacity: 0;
+                        opacity: 0;
 
                         & + span {
                             margin-top: 10px;
@@ -89,7 +89,7 @@
             position: relative;
             min-height: 250px;
             max-height: 250px;
-            border: 1px solid red;
+            // border: 1px solid red;
             border-radius: 100px;
 
             & > div {
@@ -100,9 +100,9 @@
                 position: absolute;
                 top: -150px;
                 left: -100px;
-                transform: scale(0.6);
+                transform: scale(0.7);
                 transform-origin: left bottom;
-
+                opacity: 0;
                 // border: 1px solid greenyellow;
                 
                 & path {
@@ -132,6 +132,13 @@
                     top: -50px;
                     left: -50px;
                 }
+            }
+
+            & .intro-bottom-right-cross {
+                position: absolute;
+                bottom: -140px;
+                right: -40px;
+                opacity: 0;
             }
         }
     }

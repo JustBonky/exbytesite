@@ -298,6 +298,7 @@ main > section[first-sec=true] {
 .intro-section_block--left h1 .stroke-item span {
   line-height: 1.2;
   display: inline-block;
+  opacity: 0;
 }
 .intro-section_block--left h1 .stroke-item span + span {
   margin-top: 10px;
@@ -331,7 +332,6 @@ main > section[first-sec=true] {
   position: relative;
   min-height: 250px;
   max-height: 250px;
-  border: 1px solid red;
   border-radius: 100px;
 }
 .intro-section_block--right > div {
@@ -341,8 +341,9 @@ main > section[first-sec=true] {
   position: absolute;
   top: -150px;
   left: -100px;
-  transform: scale(0.6);
+  transform: scale(0.7);
   transform-origin: left bottom;
+  opacity: 0;
 }
 .intro-section_block--right .intro-top-left-arrow path {
   stroke-dasharray: 0, 300;
@@ -363,6 +364,12 @@ main > section[first-sec=true] {
 .intro-section_block--right .intro-bottom-left-controllers svg:nth-child(2) {
   top: -50px;
   left: -50px;
+}
+.intro-section_block--right .intro-bottom-right-cross {
+  position: absolute;
+  bottom: -140px;
+  right: -40px;
+  opacity: 0;
 }
 
 .our-games-section {

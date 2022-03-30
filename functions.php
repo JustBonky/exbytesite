@@ -147,13 +147,13 @@ function exbyte_theme_scripts()
     wp_enqueue_script('es-gsap-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js', [], _S_VERSION, true);
     wp_enqueue_script('global-js', $root . '/assets/js/global.js', ['cookies-js', 'jquery', 'es-gsap', 'es-gsap-scroll'], _S_VERSION, true);
 
-    wp_enqueue_script(
-        'canvas-bg',
-        get_template_directory_uri() . '/assets/js/main-canvas-bg.js',
-        [],
-        _S_VERSION,
-        true
-    );
+    // wp_enqueue_script(
+    //     'canvas-bg',
+    //     get_template_directory_uri() . '/assets/js/main-canvas-bg.js',
+    //     [],
+    //     _S_VERSION,
+    //     true
+    // );
 
     if (is_front_page()) {
         wp_enqueue_script(
@@ -190,6 +190,17 @@ function exbyte_theme_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'exbyte_theme_scripts');
+
+require get_template_directory() . '/functions/ajax-search.php';
+
+add_filter('pre_get_posts', 'include_search_filter');
+function include_search_filter($query)
+{
+    if (!is_admin() && $query->is_main_query() && $query->is_search) {
+        $query->set('post_type', 'es_news');
+    }
+    return $query;
+}
 
 /**
  * Implement the Custom Header feature.

@@ -1,5 +1,5 @@
 .blog-intro-section {
-    height: 300px;
+    height: 250px;
     margin-top: auto !important;
     position: relative;
 
@@ -25,18 +25,21 @@
     }
 
     &-background {
-        overflow-y: hidden;
+        height: 100%;
+        // overflow-y: hidden;
     }
 
     &-background img {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        min-width: 100vw;
-        transform: translateX(-50%);
-        height: 300px;
+        height: 100%;
+        width: 100%;
+        // position: absolute;
+        // top: 0;
+        // left: 50%;
+        // min-width: 100vw;
+        // transform: translateX(-50%);
+        // height: 300px;
         object-fit: cover;
-        object-position: center 70%;
+        object-position: center;
         // filter: blur(1px);
     }
 }

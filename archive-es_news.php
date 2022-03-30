@@ -25,6 +25,25 @@ function get_attachment_url_by_slug($slug)
             <img src="http://exbyte-studios.loc/wp-content/uploads/Rectangle-9570.jpg" alt="blog-bg">
         </div>
     </section>
+
+    <section class="blog-filter-section">
+        <div>
+            <div class="blog-search">
+                <?php get_search_form(); ?>
+            </div>
+            <div class="blog-filter">
+                filter
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-posts">
+        <?php if (isset($_GET['s'])) : ?>
+            <div id="search-final-result"></div>
+        <?php else : ?>
+            <div>1, 2, 3</div>
+        <?php endif; ?>
+    </section>
 </main>
 
 <?php

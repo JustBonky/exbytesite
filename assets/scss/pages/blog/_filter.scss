@@ -1,7 +1,58 @@
 .blog-filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
 
     & .blog-search {
         display: inline-block;
-        border: 1px solid red;
+        font-family: "NunitoSans Bold", sans-serif !important;
+
+        & .search-form {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: #fff;
+            border: 2px solid rgba(255,255,255, 0.3);
+            border-radius: 30px;
+            padding: 5px 15px;
+
+            & input {
+                width: 200px;
+                padding: 10px 15px;
+                background: transparent;
+                color: #fff;
+                font-size: 20px;
+                font-family: "NunitoSans Regular", sans-serif !important;
+                transition: 250ms ease;
+
+                &:focus {
+                    width: 400px;
+                }
+            }
+
+            & button {
+                background: transparent;
+                margin-left: 20px;
+            }
+        }
+
+        & .ajax-search {
+            & .ajax-search__item {
+                border: 2px solid rgba(255,255,255, 0.3);
+                border-radius: 30px;
+                padding: 5px 15px;
+                margin: 5px 0;
+
+                & a {
+                    display: block;
+                }
+            }
+
+            & .ajax-search_not_found {
+                text-align: center;
+                margin: 5px 0;
+            }
+        }
     }
 }

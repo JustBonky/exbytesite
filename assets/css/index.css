@@ -712,9 +712,53 @@ main > section[first-sec=true] {
   object-position: center;
 }
 
+.blog-filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
 .blog-filter-section .blog-search {
   display: inline-block;
-  border: 1px solid red;
+  font-family: "NunitoSans Bold", sans-serif !important;
+}
+.blog-filter-section .blog-search .search-form {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+.blog-filter-section .blog-search .search-form input {
+  width: 200px;
+  padding: 10px 15px;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-family: "NunitoSans Regular", sans-serif !important;
+  transition: 250ms ease;
+}
+.blog-filter-section .blog-search .search-form input:focus {
+  width: 400px;
+}
+.blog-filter-section .blog-search .search-form button {
+  background: transparent;
+  margin-left: 20px;
+}
+.blog-filter-section .blog-search .ajax-search .ajax-search__item {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 5px 15px;
+  margin: 5px 0;
+}
+.blog-filter-section .blog-search .ajax-search .ajax-search__item a {
+  display: block;
+}
+.blog-filter-section .blog-search .ajax-search .ajax-search_not_found {
+  text-align: center;
+  margin: 5px 0;
 }
 
 /*# sourceMappingURL=index.css.map */

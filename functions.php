@@ -13,7 +13,8 @@ add_action('init', function () {
             'menu_icon' => 'dashicons-format-gallery',
             'supports' => ['title'],
             'rewrite' => ['slug' => 'blog'],
-            'has_archive' => true
+            'has_archive' => true,
+            'taxonomies' => array('category')
         ]
     );
     register_post_type(
@@ -201,6 +202,7 @@ function include_search_filter($query)
     }
     return $query;
 }
+
 
 /**
  * Implement the Custom Header feature.

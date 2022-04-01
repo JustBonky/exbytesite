@@ -1,20 +1,6 @@
 <?php
 get_header();
-function get_attachment_url_by_slug($slug)
-{
-    $args = array(
-        'post_type' => 'attachment',
-        'name' => sanitize_title($slug),
-        'posts_per_page' => 1,
-        'post_status' => 'inherit',
-    );
-    $_header = get_posts($args);
-    $header = $_header ? array_pop($_header) : null;
-    return $header ? wp_get_attachment_url($header->ID) : '';
-}
-
 ?>
-
     <main class="body-content container" id="body-content" role="main">
 
         <section class='blog-intro-section'>
@@ -40,7 +26,27 @@ function get_attachment_url_by_slug($slug)
             <?php if (isset($_GET['s'])) : ?>
                 <div id="search-final-result">RESULT</div>
             <?php else : ?>
-                <div>1, 2, 3</div>
+                <?php
+                $news = new WP_Query([
+                    'post_type' => 'es_news',
+                    'post_status' => 'publish'
+                ]);
+                ?>
+                <?php if ($news->have_posts()) : ?>
+                    <?php while ($news->have_posts()) : $news->the_post(); ?>
+                        <div class="blog-item">
+                            <div class="blog-item-preview-image">
+                                <?= wp_get_attachment_image(CFS()->get('post_preview_image'), 'full'); ?>
+                            </div>
+                            <div class="blog-item-date">
+                                <?= get_the_date(__('M d, Y')); ?>
+                            </div>
+                            <div class="blog-item-title">
+                                <?= CFS()->get('post_name'); ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             <?php endif; ?>
         </section>
     </main>

@@ -1,0 +1,23 @@
+.blog-posts {
+  margin: 60px auto 0px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 370px));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  justify-content: center;
+
+  & .blog-item {
+    font-family: 'NunitoSans Bold', sans-serif;
+
+
+    & .blog-item-preview-image img {
+      border-radius: 10px;
+    }
+
+    & .blog-item-date {
+      margin-top: 4px;
+      color: #F2AE0A;
+      font-size: 15px;
+    }
+  }
+}

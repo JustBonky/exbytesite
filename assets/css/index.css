@@ -798,27 +798,53 @@ main > section[first-sec=true] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
+  max-width: 700px;
   margin: 50px auto 0 auto;
+  background: #1E1E20;
+  border-radius: 30px;
+  padding: 30px 70px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 0 80px 50px;
 }
 .contact-us-form h1 {
   font-size: 40px;
   font-family: "NunitoSans Bold", sans-serif;
+  color: rgba(255, 255, 255, 0.85);
 }
 .contact-us-form > * + * {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .contact-us-form > div {
   width: 100%;
 }
+.contact-us-form .input-label-half-form {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+.contact-us-form .input-label-half-form label {
+  background: #29292C;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-left: 15px;
+  line-height: 56px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.contact-us-form .input-label-half-form input {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.contact-us-form textarea {
+  border-radius: 10px;
+}
 .contact-us-form_name input, .contact-us-form_email input, .contact-us-form_text textarea {
+  font-family: "NunitoSans Bold", sans-serif;
   width: 100%;
   padding: 15px;
   display: inline-block;
-  border-radius: 10px;
-  border: 1px solid #ddd;
   font-size: 0.9em;
   resize: none;
+  background: #29292C;
+  color: rgb(255, 255, 255);
 }
 .contact-us-form .error-name, .contact-us-form .error-email, .contact-us-form .error-comments {
   display: inline-block;

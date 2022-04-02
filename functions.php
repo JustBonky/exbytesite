@@ -174,13 +174,13 @@ function exbyte_theme_scripts()
         )
     );
 
-    // wp_enqueue_script(
-    //     'canvas-bg',
-    //     get_template_directory_uri() . '/assets/js/main-canvas-bg.js',
-    //     [],
-    //     _S_VERSION,
-    //     true
-    // );
+//    wp_enqueue_script(
+//        'canvas-bg',
+//        get_template_directory_uri() . '/assets/js/main-canvas-bg.js',
+//        [],
+//        _S_VERSION,
+//        true
+//    );
 
     if (is_front_page()) {
         wp_enqueue_script(

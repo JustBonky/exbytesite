@@ -59,23 +59,24 @@ jQuery(document).ready(function ($) {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
 
-    if (params.s && params.s.length > 2) {
+    if (params.s) {
         $.ajax({
             url: '/wp-admin/admin-ajax.php',
             type: 'POST',
             data: {
                 'action': 'ajax_search',
-                'term': params.s
+                'term': params.s,
+                'full': true,
             },
             success: function (results) {
-                final_s.fadeIn(200).html(results);
+                $('.blog-posts').fadeIn(200).html(results);
             }
         });
     }
 
     search_input.keyup(function () {
         let search_value = search_input.val();
-        if (search_value.length > 2) { // кол-во символов
+        if (search_value) { // кол-во символов
             $.ajax({
                 url: '/wp-admin/admin-ajax.php',
                 type: 'POST',

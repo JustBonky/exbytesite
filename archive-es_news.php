@@ -18,9 +18,46 @@ get_header();
                 <?php get_search_form(); ?>
             </div>
             <div class="blog-filter">
-                <div>Filter</div>
-                <div>
-                    <select name="category" id="select-category-filter">
+                <style>
+                    .blog-filter {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row-reverse;
+                    }
+
+                    #blog-filter-handler {
+                        display: none;
+                    }
+
+                    .blog-filter-body {
+                        position: relative;
+                        right: 0;
+                        opacity: 0;
+                        transition: 250ms ease;
+                    }
+
+                    #blog-filter-handler:checked ~ .blog-filter-body {
+                        right: 30px;
+                        opacity: 1;
+                    }
+
+                    #select-category-filter {
+                        font-size: 20px;
+                        background: transparent;
+                        color: #fff;
+                    }
+
+                    #select-category-filter option {
+                        position: absolute;
+                        background: #000;
+                        border: none;
+                        margin: 5px 0;
+                    }
+                </style>
+                <input type="checkbox" id="blog-filter-handler">
+                <label for="blog-filter-handler">Filter</label>
+                <div class="blog-filter-body">
+                    <select name="category" id="select-category-filter" onchange="location = this.value;">
                         <option value="*" selected disabled hidden>Select category</option>
                         <?php
                         $categories = get_categories([
@@ -30,7 +67,9 @@ get_header();
                         ]);
 
                         foreach ($categories as $cat) : ?>
-                            <option value="<?= $cat->slug ?>"><?= $cat->name ?></option>
+                            <option value="<?= get_category_link($cat->cat_ID); ?>">
+                                <?= $cat->name ?>
+                            </option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -38,8 +77,8 @@ get_header();
         </section>
 
         <section class="blog-posts">
-            <?php if ($_GET['s'] !== NULL && strlen($_GET['s']) >= 4) : ?>
-                <div id="search-final-result"></div>
+            <?php if (!empty($_GET['s'])) : ?>
+
             <?php else : ?>
                 <?php
                 $news = new WP_Query([

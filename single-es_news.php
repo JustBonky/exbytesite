@@ -17,13 +17,26 @@ get_header();
 
     <section class="blog-post-categories-sec">
         <?php foreach (wp_get_post_categories(get_the_ID()) as $rubric_id) : ?>
-            <span class="blog-item-category">
-                <a href="<?= get_category_link($rubric_id); ?>">
+            <span class="blog-post-item-category">
                     <?= get_cat_name($rubric_id); ?>
-                </a>
             </span>
         <?php endforeach; ?>
     </section>
+
+    <?php foreach (CFS()->get('post_sections') as $row) : ?>
+        <section class="blog-post-section">
+            <div class="blog-post-section_title">
+                <?= $row['post_section_title']; ?>
+            </div>
+            <div class="blog-post-section_text">
+                <?= $row['post_section_text']; ?>
+            </div>
+            <div class="blog-post-section_image">
+                <?= wp_get_attachment_image($row['post_section_image'], 'full'); ?>
+            </div>
+            <div class="blog-post-line"></div>
+        </section>
+    <?php endforeach; ?>
 </main>
 
 <?php

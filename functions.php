@@ -234,16 +234,16 @@ function ajax_action_callback()
     }
 
     if (empty($_POST['art_name'])) {
-        $err_message['name'] = 'Пожалуйста, введите ваше имя.';
+        $err_message['name'] = 'Name field is required.';
     } else {
         $art_name = sanitize_text_field($_POST['art_name']);
     }
 
     // Проверяем полей емайла, если пустое, то пишем сообщение в массив ошибок
     if (empty($_POST['art_email'])) {
-        $err_message['email'] = 'Пожалуйста, введите адрес вашей электронной почты.';
+        $err_message['email'] = 'Email field is required.';
     } elseif (!preg_match('/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i', $_POST['art_email'])) {
-        $err_message['email'] = 'Адрес электронной почты некорректный.';
+        $err_message['email'] = 'Email address in incorrect.';
     } else {
         $art_email = sanitize_email($_POST['art_email']);
 
@@ -256,7 +256,7 @@ function ajax_action_callback()
     }
     // Проверяем полей сообщения, если пустое, то пишем сообщение в массив ошибок
     if (empty($_POST['art_comments'])) {
-        $err_message['comments'] = 'Пожалуйста, введите ваше сообщение.';
+        $err_message['comments'] = 'Text something.';
     } else {
         $art_comments = sanitize_textarea_field($_POST['art_comments']);
     }
@@ -275,7 +275,7 @@ function ajax_action_callback()
         // Отправляем письмо
         wp_mail($email_to, $art_subject, $body, $headers);
         // Отправляем сообщение об успешной отправке
-        $message_success = 'Собщение отправлено. В ближайшее время я свяжусь с вами.';
+        $message_success = 'A message has been sent. We will contact you shortly.';
         wp_send_json_success($message_success);
     }
     // На всякий случай убиваем еще раз процесс ajax

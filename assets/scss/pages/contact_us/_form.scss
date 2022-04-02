@@ -22,6 +22,13 @@
 
   & > div {
     width: 100%;
+    position: relative;
+
+    & span {
+      position: absolute;
+      top: -5px;
+      transform: translateY(-100%);
+    }
   }
 
   & .input-label-half-form {
@@ -66,9 +73,9 @@
   & .error-email,
   & .error-comments {
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
-    padding: 5px 10px;
+    padding: 0px 7px;
     background: #6f1840;
     border-radius: 30px;
     margin-bottom: 5px;
@@ -77,4 +84,8 @@
   & button {
     font-size: 20px;
   }
+}
+
+.message-success {
+  text-align: center;
 }

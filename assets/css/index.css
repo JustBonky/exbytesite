@@ -955,4 +955,82 @@ main > section[first-sec=true] {
   background: rgba(255, 255, 255, 0.4);
 }
 
+.jobs-suptitle {
+  font-size: 68px;
+  font-family: "NunitoSans Bold", sans-serif;
+  margin-top: 60px;
+  display: block;
+}
+
+.jobs-section {
+  margin-top: 50px !important;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.jobs-section .jobs-title {
+  text-align: center;
+  font-size: 50px;
+  font-family: "NunitoSans Bold", sans-serif;
+}
+.jobs-section .jobs-items {
+  margin-top: 70px;
+}
+.jobs-section .jobs-items .jobs-item + .jobs-item {
+  margin-top: 50px;
+}
+.jobs-section .jobs-items .jobs-item {
+  border-radius: 30px;
+  padding: 20px 30px;
+  background: #1e1e20;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  transition: 200ms ease;
+  height: auto;
+}
+.jobs-section .jobs-items .jobs-item_title {
+  font-family: "NunitoSans Bold", sans-serif;
+}
+.jobs-section .jobs-items .jobs-item_body {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+.jobs-section .jobs-items .jobs-item_body > div {
+  display: flex;
+  align-items: center;
+}
+.jobs-section .jobs-items .jobs-item_body > div svg {
+  margin-right: 5px;
+}
+.jobs-section .jobs-items .jobs-item_handler {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-32%) scale(1.4);
+  max-height: 44px;
+  cursor: pointer;
+}
+.jobs-section .jobs-items .jobs-item_text {
+  transition: 200ms ease;
+  display: none;
+}
+.jobs-section .jobs-items .jobs-item_text_descr_title, .jobs-section .jobs-items .jobs-item_text_req_title {
+  margin-top: 40px;
+  font-family: "NunitoSans Bold", sans-serif;
+}
+.jobs-section .jobs-items .jobs-item_text_descr, .jobs-section .jobs-items .jobs-item_text_req {
+  margin-top: 20px;
+  padding: 0 140px;
+  line-height: 2;
+  font-size: 22px;
+}
+.jobs-section .jobs-items .jobs-item_apply {
+  text-align: center;
+}
+.jobs-section .jobs-items .jobs-item button {
+  margin-top: 200px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=index.css.map */

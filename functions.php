@@ -20,8 +20,7 @@ add_action('init', function () {
         'es_news',
         [
             'labels' => [
-                'name' => 'Блог',
-                'add_new' => 'Добавить новость'
+                'name' => 'Blog',
             ],
             'public' => true,
             'menu_position' => 4,
@@ -36,9 +35,7 @@ add_action('init', function () {
         'es_games',
         [
             'labels' => [
-                'name' => 'Игры',
-                'add_new' => 'Добавить новую',
-                'add_new_item' => 'Добавить новую игру'
+                'name' => 'Games',
             ],
             'public' => true,
             'menu_position' => 5,
@@ -53,14 +50,26 @@ add_action('init', function () {
         'es_socials',
         [
             'labels' => [
-                'name' => 'Соц. сети',
-                'add_new' => 'Добавить новую',
-                'add_new_item' => 'Добавить новую соц. сеть',
+                'name' => 'Socials',
             ],
             'public' => true,
             'menu_position' => 6,
             'menu_icon' => 'dashicons-twitter',
             'supports' => ['title']
+        ]
+    );
+
+    register_post_type(
+        'es_jobs',
+        [
+            'labels' => [
+                'name' => 'Jobs',
+            ],
+            'public' => true,
+            'menu_position' => 7,
+            'menu_icon' => 'dashicons-admin-users',
+            'supports' => ['title'],
+            'has_archive' => false
         ]
     );
 });

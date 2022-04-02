@@ -100,3 +100,16 @@ jQuery(document).ready(function ($) {
         }
     });
 });
+
+$('.jobs-item').each(function () {
+    $(this).click(function () {
+        if ($(this).find('.jobs-item_text').is(':visible')) {
+            $(this).find('.jobs-item_text').fadeOut(200)
+        } else {
+            $('.jobs-item .jobs-item_text').each(function () {
+                $(this).fadeOut(200)
+            })
+            $(this).find('.jobs-item_text').fadeIn(200)
+        }
+    })
+})

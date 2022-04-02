@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_wp_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ParolHello
+      MYSQL_DATABASE: exbyte
+    restart: always
+  
+  wp:
+    image: wordpress:latest
+    depends_on:
+      - db
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: ParolHello
+      WORDPRESS_DB_NAME: exbyte
+    volumes:
+      - ./wordpress:/var/www/html/
+    ports:
+      - "80:80"
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+volumes:
+  db_wp_data: {}

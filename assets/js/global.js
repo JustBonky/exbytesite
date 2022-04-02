@@ -16,8 +16,8 @@ const tl = gsap.timeline({
     onReverseComplete: () => aft.classList.remove('scrolled'),
 });
 
-tl.to('.body_header', { height: 80 });
-tl.to('.logo', { scale: 0.95 });
+tl.to('.body_header', {height: 80});
+tl.to('.logo', {scale: 0.95});
 
 
 // gsap.to('.body-header .menu li', 0.5, {
@@ -59,7 +59,7 @@ jQuery(document).ready(function ($) {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
 
-    if (params.s && params.s.length > 0) {
+    if (params.s && params.s.length > 2) {
         $.ajax({
             url: '/wp-admin/admin-ajax.php',
             type: 'POST',
@@ -68,7 +68,6 @@ jQuery(document).ready(function ($) {
                 'term': params.s
             },
             success: function (results) {
-                console.log(results);
                 final_s.fadeIn(200).html(results);
             }
         });
@@ -76,7 +75,7 @@ jQuery(document).ready(function ($) {
 
     search_input.keyup(function () {
         let search_value = search_input.val();
-        if (search_value.length > 0) { // кол-во символов 
+        if (search_value.length > 2) { // кол-во символов
             $.ajax({
                 url: '/wp-admin/admin-ajax.php',
                 type: 'POST',
@@ -95,11 +94,8 @@ jQuery(document).ready(function ($) {
 
     // Закрытие поиска при клике вне его 
     $(document).mouseup(function (e) {
-        if (
-            (search_input.has(e.target).length === 0) &&
-            (search_results.has(e.target).length === 0)
-        ) {
+        if (($('search-form-wrapper').has(e.target).length === 0)) {
             search_results.fadeOut(200);
-        };
+        }
     });
 });

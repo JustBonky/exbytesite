@@ -17,14 +17,16 @@ get_header();
                 <?php while ($games->have_posts()) : $games->the_post(); ?>
 
                     <div class="press-kit-item">
+                        <a href="<?= get_post_permalink(); ?>">
 
-                        <div class="press-kit-title">
-                            <?= CFS()->get('game-name'); ?>
-                        </div>
+                            <div class="press-kit-title">
+                                <?= CFS()->get('game-name'); ?>
+                            </div>
 
-                        <div class="press-kit-image">
-                            <?= wp_get_attachment_image(CFS()->get('preview-image'), 'full'); ?>
-                        </div>
+                            <div class="press-kit-image">
+                                <?= wp_get_attachment_image(CFS()->get('preview-image'), 'full'); ?>
+                            </div>
+                        </a>
                     </div>
 
                 <?php endwhile; ?>

@@ -1,0 +1,134 @@
+.game-news {
+    margin-top: 100px;
+    min-height: 250px;
+
+    &_title {
+        font-family: "NunitoSans Bold", sans-serif;
+        font-size: 50px;
+    }
+
+    &_body {
+        margin-top: 60px !important;
+        min-height: 250px;
+    }
+
+    & .news_slider {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        position: relative;
+        min-height: 250px;
+
+        & .owl-stage, .owl-stage-outer {
+            min-height: inherit;
+        }
+
+        & .owl-item {
+            min-height: inherit;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            color: #fff;
+            background-color: #000;
+            border-radius: 10px;
+            justify-content: center;
+
+            & .news_slider_item {
+                height: 100%;
+            }
+
+            & .news_slider_item a {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+            }
+
+            & p {
+                text-align: left;
+                z-index: 10;
+                font-size: 20px;
+                font-family: "NunitoSans Bold", sans-serif;
+                margin-left: 15px;
+                margin-right: 15px;
+                background: #000;
+                //display: inline-block;
+                width: fit-content;
+                border: 1px solid #000;
+                padding: 5px;
+                display: block;
+                display: -webkit-box;
+                -webkit-line-clamp: 1; /* количество строк */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &:nth-child(1) {
+                    font-size: 30px;
+                }
+            }
+
+            & .bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+        & .owl-prev {
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            opacity: 0.7;
+        }
+
+        & .owl-next {
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            opacity: 0.7;
+        }
+
+        & > .owl-dots {
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+
+            & .owl-dot {
+                display: block;
+                margin: 0 10px;
+                width: 12px;
+                height: 12px;
+                border-radius: 30px;
+                background-color: #000;
+                transition: 300ms ease;
+                cursor: pointer;
+
+                & span {
+                    display: none;
+                }
+
+                &.active {
+                    width: 25px;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

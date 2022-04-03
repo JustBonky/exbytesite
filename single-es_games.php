@@ -6,6 +6,7 @@ function endsWith(string $string, string $end): bool
 {
     return (($offset = strlen($string) - strlen($end)) >= 0) && strpos($string, $end, $offset) !== false;
 }
+
 ?>
 
 
@@ -24,7 +25,7 @@ function endsWith(string $string, string $end): bool
 
 
 <main class="body-content container" id="body-content" role="main">
-    <section class="intro-section" first-sec="true">
+    <section class="game-intro-section" first-sec="true">
         <div class="game-intro_block">
             <h1 class="game-title">
                 <?= CFS()->get('game-name'); ?>
@@ -49,50 +50,79 @@ function endsWith(string $string, string $end): bool
                     <?php endif; ?>
                 </div>
             </div>
-        </div>
-
-        <div class="game-intro_block">
-            <style>
-                .game-intro_block:nth-child(2) .cfs-hyperlink {
-                    display: flex;
-                    align-items: center;
-                    padding: 10px 25px;
-                }
-
-                .game-intro_block:nth-child(2) .cfs-hyperlink svg {
-                    margin-left: 10px;
-                    margin-bottom: 3px;
-                }
-            </style>
-            <?= CFS()->get('main-link-general'); ?>
+            <div class="cfs-hyperlink-wrapper">
+                <?= CFS()->get('main-link-general'); ?>
+            </div>
             <script>
-                const node = document.querySelector('.game-intro_block:nth-child(2) .cfs-hyperlink');
+                const node = document.querySelector('.cfs-hyperlink-wrapper .cfs-hyperlink');
                 node.classList.add('prm-btn-white');
                 node.innerHTML += `
-                        <svg viewBox="0 0 24 24" height="24" viewbox="0 0 24 24" width="24" fill="#000">
-                            <rect fill="none" height="24" width="24"></rect>
-                            <path d="M9,5v2h6.59L4,18.59L5.41,20L17,8.41V15h2V5H9z"></path>
-                        </svg>`;
+                                        <svg viewBox="0 0 24 24" height="24" viewbox="0 0 24 24" width="24" fill="#000">
+                                            <rect fill="none" height="24" width="24"></rect>
+                                            <path d="M9,5v2h6.59L4,18.59L5.41,20L17,8.41V15h2V5H9z"></path>
+                                        </svg>`;
             </script>
         </div>
     </section>
 
-    <section>
-        Hello world
+    <section class="game-gallery">
+        <div class="game-gallery_title">Screenshots</div>
+        <div class="game-gallery_body">
+            <div class="owl-carousel game-gallery_body_carousel">
+                <?php foreach (CFS()->get('screenshots') as $screen) : ?>
+                    <div class="game-slider-el">
+                        <div class="game-image">
+                            <?= wp_get_attachment_image($screen['image-screenshot'], 'full'); ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
     </section>
-    <section>
-        Hello world
+
+    <section class="game-about">
+        <div class="game-about_title">About game</div>
+        <div class="game-about_body">
+            <?php foreach (CFS()->get('sections') as $sec) : ?>
+                <div class="game-about_body_item">
+                    <div class="game-about_body_item_title"><?= $sec['name-section']; ?></div>
+                    <div class="game-about_body_wrap">
+                        <div class="game-about_body_item_img">
+                            <?= wp_get_attachment_image($sec['preview-image-section'], 'full'); ?>
+                        </div>
+                        <div class="game-about_body_item_text">
+                            <?= $sec['text-section']; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
     </section>
-    <section>
-        Hello world
-    </section>
-    <section>
-        Hello world
+
+    <section class="game-news">
+        <div class="game-news_title">Last news</div>
+        <div class="game-news_body news_slider owl-carousel">
+            <?php
+            $news = new WP_Query([
+                'post_type' => 'es_news',
+                'post_status' => 'publish',
+                'category_name' => 'abyss-protection'
+            ]);
+            if ($news->have_posts()) : ?>
+                <?php while ($news->have_posts()) : $news->the_post(); ?>
+                    <div class="news_slider_item">
+                        <a href="<?= get_post_permalink(); ?>">
+                            <p><?= CFS()->get('post_name'); ?></p>
+                            <p>None</p>
+                            <div class="bg">
+                                <?= wp_get_attachment_image(CFS()->get('post_preview_image'), 'full'); ?>
+                            </div>
+                        </a>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
     </section>
 </main>
 
-<?php
-
-get_footer();
-
-?>
+<?php get_footer(); ?>

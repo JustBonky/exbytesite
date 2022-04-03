@@ -42,4 +42,50 @@ $(document).ready(function () {
         // autoplayTimeout: 4000,
         // autoplayHoverPause: true,
     });
+
+    $(".game-gallery_body_carousel").owlCarousel({
+        loop: true,
+        items: 1,
+        smartSpeed: 700,
+        dots: true,
+        dotsEach: true,
+        nav: true,
+        responsive: {
+            0: {
+                margin: 10,
+            },
+            1024: {
+                margin: 15,
+            },
+            1200: {
+                margin: 20,
+            }
+        },
+        // autoplay: true,
+        // autoplayTimeout: 4000,
+        // autoplayHoverPause: true,
+    });
+
+    $(".game-news_body").owlCarousel({
+        loop: true,
+        items: 3,
+        smartSpeed: 700,
+        dots: true,
+        dotsEach: true,
+        nav: true,
+        responsive: {
+            0: {
+                margin: 10,
+            },
+            1024: {
+                margin: 15,
+            },
+            1200: {
+                margin: 20,
+            }
+        },
+        // autoplay: true,
+        // autoplayTimeout: 4000,
+        // autoplayHoverPause: true,
+    });
 });

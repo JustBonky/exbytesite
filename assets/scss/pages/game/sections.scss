@@ -1,0 +1,36 @@
+.game-about {
+  margin-top: 150px;
+
+  &_title {
+    font-size: 50px;
+    font-family: 'NunitoSans Bold', sans-serif;
+  }
+
+  &_body {
+    margin-top: 80px;
+
+    &_item + &_item {
+      margin-top: 120px;
+    }
+
+    &_wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    &_item {
+      &_text {
+        width: 60%;
+        padding: 15px 40px;
+      }
+
+      &_img {
+        width: 40%;
+
+        & img {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

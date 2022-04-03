@@ -191,14 +191,15 @@ function exbyte_theme_scripts()
 //        true
 //    );
 
+    wp_enqueue_script(
+        'es-carousels',
+        get_template_directory_uri() . '/assets/js/carousels.js',
+        ['jquery', 'es-owl-carousel'],
+        _S_VERSION,
+        true
+    );
+    
     if (is_front_page()) {
-        wp_enqueue_script(
-            'es-carousels',
-            get_template_directory_uri() . '/assets/js/carousels.js',
-            ['jquery', 'es-owl-carousel'],
-            _S_VERSION,
-            true
-        );
 
         wp_enqueue_script(
             'es-home-js',

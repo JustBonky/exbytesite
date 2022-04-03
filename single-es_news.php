@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <main class="body-content container" id="body-content" role="main">
     <section class='blog-intro-section'>
@@ -18,7 +16,7 @@ get_header();
     <section class="blog-post-categories-sec">
         <?php foreach (wp_get_post_categories(get_the_ID()) as $rubric_id) : ?>
             <span class="blog-post-item-category">
-                    <?= get_cat_name($rubric_id); ?>
+                <?= get_cat_name($rubric_id); ?>
             </span>
         <?php endforeach; ?>
     </section>
@@ -39,6 +37,4 @@ get_header();
     <?php endforeach; ?>
 </main>
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>

@@ -1,0 +1,93 @@
+.jobs-suptitle {
+  font-size: 68px;
+  font-family: "NunitoSans Bold", sans-serif;
+  margin-top: 60px;
+  display: block;
+}
+
+.jobs-section {
+  //margin-top: 50px !important;
+  max-width: 1000px;
+  margin: 50px auto 0 auto;
+
+  & .jobs-title {
+    text-align: center;
+    font-size: 50px;
+    font-family: "NunitoSans Bold", sans-serif;
+  }
+
+  & .jobs-items {
+    margin-top: 70px;
+
+    & .jobs-item + .jobs-item {
+      margin-top: 50px;
+    }
+
+    & .jobs-item {
+      border-radius: 30px;
+      padding: 20px 30px;
+      background: #1e1e20;
+      color: rgba(255, 255, 255, 0.7);
+      position: relative;
+      transition: 200ms ease;
+      height: auto;
+
+      &_title {
+        font-family: "NunitoSans Bold", sans-serif;
+      }
+
+      &_body {
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+
+        & > div {
+          display: flex;
+          align-items: center;
+
+          & svg {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      &_handler {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-32%) scale(1.4);
+        max-height: 44px;
+        cursor: pointer;
+      }
+
+      &_text {
+        transition: 200ms ease;
+        display: none;
+
+        &_descr_title,
+        &_req_title {
+          margin-top: 40px;
+          font-family: "NunitoSans Bold", sans-serif;
+        }
+
+        &_descr,
+        &_req {
+          margin-top: 20px;
+          padding: 0 140px;
+          line-height: 2;
+          font-size: 22px;
+        }
+      }
+
+      &_apply {
+        text-align: center;
+      }
+
+      & button {
+        margin-top: 200px;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
